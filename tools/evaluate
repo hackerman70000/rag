@@ -1,0 +1,424 @@
+#!/usr/bin/env -S uv run --script
+import asyncio
+import json
+import os
+import re
+import sys
+import time
+from dataclasses import dataclass, field
+from datetime import datetime
+from pathlib import Path
+
+import httpx
+import typer
+from dotenv import load_dotenv
+from loguru import logger
+from rich.console import Console
+from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn
+from rich.table import Table
+from typing_extensions import Annotated
+
+from rag.config import Config
+
+load_dotenv()
+
+app = typer.Typer()
+console = Console()
+
+JUDGE_SYSTEM_PROMPT = """You are an expert evaluator for threat intelligence question-answering systems.
+
+Your task is to evaluate how well an answer addresses a question, compared to the expected answer points.
+
+Score the answer on a scale of 1-5:
+- 5: Excellent - All key points covered accurately, comprehensive and precise
+- 4: Good - Most key points covered, minor omissions or inaccuracies
+- 3: Adequate - Some key points covered, notable gaps but generally correct
+- 2: Poor - Few key points covered, significant errors or omissions
+- 1: Failed - Does not answer the question or completely incorrect
+
+Consider:
+1. Factual accuracy compared to expected points
+2. Completeness (how many expected points are addressed)
+3. Relevance (stays on topic, no hallucinations)
+4. Specificity (concrete details vs vague statements)"""
+
+JUDGE_USER_TEMPLATE = """Question: {question}
+
+Expected Answer Points:
+{expected_points}
+
+Actual Answer:
+{actual_answer}
+
+Provide your evaluation in this exact JSON format:
+{{"score": <1-5>, "reasoning": "<brief explanation>"}}"""
+
+
+@dataclass
+class AsyncOpenRouterClient:
+    api_key: str
+    model: str = "google/gemma-3n-e4b-it"
+    base_url: str = "https://openrouter.ai/api/v1/chat/completions"
+    max_retries: int = 3
+
+    async def query(self, messages: list[dict], http_client: httpx.AsyncClient) -> str:
+        for attempt in range(self.max_retries):
+            try:
+                response = await http_client.post(
+                    self.base_url,
+                    headers={
+                        "Authorization": f"Bearer {self.api_key}",
+                        "Content-Type": "application/json",
+                    },
+                    json={"model": self.model, "messages": messages},
+                    timeout=120,
+                )
+
+                if response.status_code == 429:
+                    wait_time = 2 ** attempt
+                    logger.warning(f"Rate limited, waiting {wait_time}s...")
+                    await asyncio.sleep(wait_time)
+                    continue
+
+                response.raise_for_status()
+                return response.json()["choices"][0]["message"]["content"]
+
+            except httpx.RequestError as e:
+                if attempt == self.max_retries - 1:
+                    raise
+                logger.warning(f"Request failed (attempt {attempt + 1}): {e}")
+                await asyncio.sleep(2 ** attempt)
+
+        raise RuntimeError("Max retries exceeded")
+
+
+def load_benchmark_results(path: Path) -> dict:
+    with open(path) as f:
+        return json.load(f)
+
+
+def keyword_match_score(expected_points: list[str], actual_answer: str) -> dict:
+    if not actual_answer or not expected_points:
+        return {"score": 0, "matched": 0, "total": len(expected_points), "matches": []}
+
+    actual_lower = actual_answer.lower()
+    matches = []
+
+    for point in expected_points:
+        keywords = re.findall(r'\b\w{4,}\b', point.lower())
+        keywords = [k for k in keywords if k not in ('the', 'and', 'for', 'with', 'from', 'that', 'this', 'have', 'been')]
+
+        if not keywords:
+            continue
+
+        matched_keywords = sum(1 for k in keywords if k in actual_lower)
+        match_ratio = matched_keywords / len(keywords) if keywords else 0
+
+        if match_ratio >= 0.5:
+            matches.append(point)
+
+    matched_count = len(matches)
+    total_points = len(expected_points)
+    score = (matched_count / total_points * 5) if total_points > 0 else 0
+
+    return {
+        "score": round(score, 2),
+        "matched": matched_count,
+        "total": total_points,
+        "match_ratio": matched_count / total_points if total_points > 0 else 0,
+        "matches": matches,
+    }
+
+
+async def llm_judge_score(
+    question: str,
+    expected_points: list[str],
+    actual_answer: str,
+    client: AsyncOpenRouterClient,
+    http_client: httpx.AsyncClient,
+) -> dict:
+    if not actual_answer:
+        return {"score": 0, "reasoning": "No answer provided"}
+
+    expected_formatted = "\n".join(f"- {p}" for p in expected_points)
+
+    messages = [
+        {"role": "system", "content": JUDGE_SYSTEM_PROMPT},
+        {"role": "user", "content": JUDGE_USER_TEMPLATE.format(
+            question=question,
+            expected_points=expected_formatted,
+            actual_answer=actual_answer[:2000],
+        )},
+    ]
+
+    try:
+        response = await client.query(messages, http_client)
+        json_match = re.search(r'\{[^}]+\}', response)
+        if json_match:
+            result = json.loads(json_match.group())
+            return {
+                "score": min(max(int(result.get("score", 0)), 1), 5),
+                "reasoning": result.get("reasoning", ""),
+            }
+        return {"score": 0, "reasoning": f"Failed to parse response: {response[:100]}"}
+    except Exception as e:
+        return {"score": 0, "reasoning": f"Error: {str(e)}"}
+
+
+async def evaluate_single(
+    result: dict,
+    client: AsyncOpenRouterClient,
+    http_client: httpx.AsyncClient,
+    use_llm_judge: bool,
+) -> dict:
+    question = result.get("question", "")
+    expected = result.get("expected_answer", {})
+    expected_points = expected.get("points", [])
+
+    evaluation = {
+        "question_id": result.get("question_id"),
+        "question_type": result.get("question_type"),
+        "difficulty": result.get("difficulty"),
+        "rag": None,
+        "llm_only": None,
+    }
+
+    for mode in ["rag", "llm_only"]:
+        mode_result = result.get(mode)
+        if not mode_result:
+            continue
+
+        actual_answer = mode_result.get("answer", "")
+
+        keyword_result = keyword_match_score(expected_points, actual_answer)
+
+        llm_result = {"score": 0, "reasoning": "Skipped"}
+        if use_llm_judge and actual_answer:
+            llm_result = await llm_judge_score(
+                question, expected_points, actual_answer, client, http_client
+            )
+
+        evaluation[mode] = {
+            "llm_judge": llm_result,
+            "score": llm_result["score"] if use_llm_judge else keyword_result["score"],
+        }
+
+    return evaluation
+
+
+async def run_evaluation(
+    results: list[dict],
+    client: AsyncOpenRouterClient,
+    concurrency: int,
+    use_llm_judge: bool,
+) -> list[dict]:
+    evaluations = []
+    semaphore = asyncio.Semaphore(concurrency)
+
+    async def bounded_evaluate(result: dict, http_client: httpx.AsyncClient):
+        async with semaphore:
+            return await evaluate_single(result, client, http_client, use_llm_judge)
+
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TextColumn("{task.completed}/{task.total}"),
+        TimeElapsedColumn(),
+    ) as progress:
+        task = progress.add_task(f"Evaluating (concurrency={concurrency})...", total=len(results))
+
+        async with httpx.AsyncClient() as http_client:
+            pending = [bounded_evaluate(r, http_client) for r in results]
+
+            for coro in asyncio.as_completed(pending):
+                evaluation = await coro
+                evaluations.append(evaluation)
+                progress.update(task, advance=1)
+
+    evaluations.sort(key=lambda x: x["question_id"])
+    return evaluations
+
+
+def compute_summary(evaluations: list[dict], use_llm_judge: bool) -> dict:
+    rag_scores = []
+    llm_only_scores = []
+
+    by_type = {}
+    by_difficulty = {}
+
+    for e in evaluations:
+        q_type = e.get("question_type", "unknown")
+        difficulty = e.get("difficulty", "unknown")
+
+        if q_type not in by_type:
+            by_type[q_type] = {"rag": [], "llm_only": []}
+        if difficulty not in by_difficulty:
+            by_difficulty[difficulty] = {"rag": [], "llm_only": []}
+
+        if e.get("rag"):
+            score = e["rag"]["score"]
+            rag_scores.append(score)
+            by_type[q_type]["rag"].append(score)
+            by_difficulty[difficulty]["rag"].append(score)
+
+        if e.get("llm_only"):
+            score = e["llm_only"]["score"]
+            llm_only_scores.append(score)
+            by_type[q_type]["llm_only"].append(score)
+            by_difficulty[difficulty]["llm_only"].append(score)
+
+    def avg(lst):
+        return sum(lst) / len(lst) if lst else 0
+
+    rag_wins = sum(1 for e in evaluations if e.get("rag") and e.get("llm_only") and e["rag"]["score"] > e["llm_only"]["score"])
+    llm_wins = sum(1 for e in evaluations if e.get("rag") and e.get("llm_only") and e["llm_only"]["score"] > e["rag"]["score"])
+    ties = sum(1 for e in evaluations if e.get("rag") and e.get("llm_only") and e["rag"]["score"] == e["llm_only"]["score"])
+
+    summary = {
+        "total_evaluated": len(evaluations),
+        "rag": {
+            "avg_score": round(avg(rag_scores), 2),
+        },
+        "llm_only": {
+            "avg_score": round(avg(llm_only_scores), 2),
+        },
+        "comparison": {
+            "rag_wins": rag_wins,
+            "llm_only_wins": llm_wins,
+            "ties": ties,
+        },
+        "by_question_type": {
+            t: {"rag": round(avg(v["rag"]), 2), "llm_only": round(avg(v["llm_only"]), 2)}
+            for t, v in by_type.items()
+        },
+        "by_difficulty": {
+            d: {"rag": round(avg(v["rag"]), 2), "llm_only": round(avg(v["llm_only"]), 2)}
+            for d, v in by_difficulty.items()
+        },
+    }
+
+    return summary
+
+
+def display_results(summary: dict, use_llm_judge: bool):
+    table = Table(title="Evaluation Summary: RAG vs LLM-only", show_lines=True)
+    table.add_column("Metric", style="cyan")
+    table.add_column("RAG", style="green")
+    table.add_column("LLM-only", style="yellow")
+    table.add_column("Winner", style="bold")
+
+    rag = summary["rag"]
+    llm = summary["llm_only"]
+
+    def winner(r, l):
+        if r > l:
+            return "RAG ✓"
+        elif l > r:
+            return "LLM ✓"
+        return "Tie"
+
+    table.add_row(
+        "LLM Judge Score (1-5)",
+        f"{rag['avg_score']:.2f}",
+        f"{llm['avg_score']:.2f}",
+        winner(rag['avg_score'], llm['avg_score']),
+    )
+
+    console.print()
+    console.print(table)
+
+    comp = summary["comparison"]
+    console.print()
+    console.print(f"[bold]Head-to-head:[/bold] RAG wins {comp['rag_wins']}, LLM-only wins {comp['llm_only_wins']}, Ties {comp['ties']}")
+
+    console.print()
+    console.print("[bold]By Question Type:[/bold]")
+    type_table = Table(show_lines=True)
+    type_table.add_column("Type", style="cyan")
+    type_table.add_column("RAG", style="green")
+    type_table.add_column("LLM-only", style="yellow")
+
+    for q_type, scores in summary["by_question_type"].items():
+        type_table.add_row(q_type, f"{scores['rag']:.2f}", f"{scores['llm_only']:.2f}")
+
+    console.print(type_table)
+
+    console.print()
+    console.print("[bold]By Difficulty:[/bold]")
+    diff_table = Table(show_lines=True)
+    diff_table.add_column("Difficulty", style="cyan")
+    diff_table.add_column("RAG", style="green")
+    diff_table.add_column("LLM-only", style="yellow")
+
+    for diff, scores in summary["by_difficulty"].items():
+        diff_table.add_row(diff, f"{scores['rag']:.2f}", f"{scores['llm_only']:.2f}")
+
+    console.print(diff_table)
+
+
+@app.command()
+def main(
+    benchmark: Annotated[Path, typer.Argument(help="Path to benchmark results JSON")],
+    output: Annotated[Path, typer.Option(help="Output evaluation JSON path")] = None,
+    model: Annotated[str, typer.Option(help="LLM model for judge")] = "google/gemma-3n-e4b-it",
+    concurrency: Annotated[int, typer.Option(help="Number of concurrent requests")] = 10,
+    skip_llm_judge: Annotated[bool, typer.Option("--skip-llm-judge", help="Skip LLM-as-a-Judge")] = False,
+):
+    logger.remove()
+    logger.add(sys.stderr, format="<green>{time:HH:mm:ss}</green> | <level>{level: <8}</level> | <level>{message}</level>", level="INFO")
+
+    if not benchmark.exists():
+        logger.error(f"Benchmark file not found: {benchmark}")
+        raise typer.Exit(code=1)
+
+    use_llm_judge = not skip_llm_judge
+
+    api_key = os.getenv("OPENROUTER_API_KEY")
+    if use_llm_judge and not api_key:
+        logger.error("OPENROUTER_API_KEY required for LLM-as-a-Judge")
+        logger.error("Use --skip-llm-judge for keyword-only evaluation")
+        raise typer.Exit(code=1)
+
+    client = AsyncOpenRouterClient(api_key=api_key or "", model=model) if use_llm_judge else None
+
+    if output is None:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output = benchmark.parent / f"evaluation_{timestamp}.json"
+
+    logger.info(f"Loading benchmark results from: {benchmark}")
+    data = load_benchmark_results(benchmark)
+    results = data.get("results", [])
+    logger.info(f"Loaded {len(results)} results")
+
+    logger.info(f"LLM-as-a-Judge: {'enabled' if use_llm_judge else 'disabled'}")
+    if use_llm_judge:
+        logger.info(f"Judge model: {model}")
+
+    start_time = time.time()
+    evaluations = asyncio.run(run_evaluation(results, client, concurrency, use_llm_judge))
+    total_time = time.time() - start_time
+
+    summary = compute_summary(evaluations, use_llm_judge)
+
+    output_data = {
+        "metadata": {
+            "benchmark_file": str(benchmark),
+            "judge_model": model if use_llm_judge else None,
+            "use_llm_judge": use_llm_judge,
+            "timestamp": datetime.now().isoformat(),
+            "total_time_seconds": total_time,
+        },
+        "summary": summary,
+        "evaluations": evaluations,
+    }
+
+    with open(output, "w") as f:
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
+
+    logger.success(f"Evaluation saved to: {output}")
+    display_results(summary, use_llm_judge)
+
+
+if __name__ == "__main__":
+    app()

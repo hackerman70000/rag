@@ -1,0 +1,1961 @@
+{
+  "metadata": {
+    "benchmark_file": "data/evaluation/benchmark.json",
+    "judge_model": "openai/gpt-oss-120b",
+    "use_llm_judge": true,
+    "timestamp": "2026-01-02T00:11:24.020641",
+    "total_time_seconds": 24.66535782814026
+  },
+  "summary": {
+    "total_evaluated": 100,
+    "rag": {
+      "avg_score": 2.44
+    },
+    "llm_only": {
+      "avg_score": 1.5
+    },
+    "comparison": {
+      "rag_wins": 52,
+      "llm_only_wins": 7,
+      "ties": 41
+    },
+    "by_question_type": {
+      "FACTUAL": {
+        "rag": 2.24,
+        "llm_only": 1.24
+      },
+      "ANALYTICAL": {
+        "rag": 2.96,
+        "llm_only": 2.16
+      },
+      "TECHNICAL": {
+        "rag": 2.6,
+        "llm_only": 1.28
+      },
+      "COMPARATIVE/CONTEXTUAL": {
+        "rag": 1.6,
+        "llm_only": 1.8
+      },
+      "COMPARATIVE": {
+        "rag": 2.05,
+        "llm_only": 1.2
+      }
+    },
+    "by_difficulty": {
+      "easy": {
+        "rag": 2.46,
+        "llm_only": 1.21
+      },
+      "medium": {
+        "rag": 2.6,
+        "llm_only": 1.83
+      },
+      "hard": {
+        "rag": 2.12,
+        "llm_only": 1.2
+      }
+    }
+  },
+  "evaluations": [
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not provide any of the expected key points. It incorrectly claims no task name is given, whereas the correct name is 'Customer Engineering' with details on execution and creation method. The response is factually inaccurate and fails to answer the question."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer provides an incorrect task name ('GoLoader' instead of the expected 'Customer Engineering') and omits the details about executing the second‑stage JavaScript file and using WScript calls. It fails to address any of the key expected points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer provides an incorrect pipe name (msagent) and omits both the correct pipe name from the beacon configuration and the associated port 4444. It does not address any of the expected answer points, making it inaccurate and incomplete."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 0,
+          "reasoning": "Error: Invalid \\escape: line 1 column 75 (char 74)"
+        },
+        "score": 0
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer provides no information about the expected payout percentages, does not mention the 60-75% range, performance dependency, or the RaaS model, and incorrectly claims a lack of data. It fails to address the question."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions a performance‑based split and cites a range for affiliates, but the range (70–80%) does not match the expected 60–75% and adds inaccurate details about regional adjustments. While it mentions performance‑based variation, the key numeric range is incorrect, so the response is incomplete and partially inaccurate."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly states that the Rclone executable is renamed to mimic 'svchost.exe', covering part of the naming convention. However, it omits the renaming of the configuration file to 'svchost.conf' and does not mention the specific incidents (Gefco, Ouest-France, Pierre Fabre, The DFIR Report) where this was observed, resulting in incomplete coverage of the expected points."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the expected svchost.exe/svchost.conf naming, fails to note the spoofing of the Windows svchost service, and incorrectly claims the tool is named rc.exe. It provides inaccurate information and omits all key points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer incorrectly identifies FlawedAmmyy RAT as the C&C tool, whereas the expected answer specifies Cobalt Strike (with its Beacon agent, likely cracked version, and specific C&C IPs). It fails to mention any of the expected points and provides unrelated details, making it inaccurate and incomplete."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention Cobalt Strike, its Beacon agent, the likely cracked version, or the listed C&C server IPs. It incorrectly claims a custom CLOP RAT, failing to address any of the expected key points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer provides an incorrect XOR key (0x2e) and does not mention any of the expected keys (0xE3F4C314, 0x23) or other details about static keys per version or parsing patterns, thus failing to address the question."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer is completely incorrect. It states a 0xFA single-byte XOR key, which does not match either of the expected default keys (0xE3F4C314 or 0x23). It also omits the distinction between staged and PowerShell HTA payloads, the fact that the keys are static per beacon version, and the mention of configuration markers in the executable. Hence it fails to address any of the expected answer points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly identifies the SkeletonKeyInjector malware and mentions direct system‑call techniques, covering two of the four expected points. However, it omits the details about code extracted from Dumpert and Mimikatz and the discovery in both Case A and Case B, resulting in notable gaps."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the SkeletonKeyInjector malware, the code sources (Dumpert and Mimikatz), direct syscall technique, or the discovery in Case A and Case B. It provides unrelated details about Cobalt Strike, so it fails to address the key expected points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly identifies Qakbot as the trojan, but omits the crucial details about the malicious Excel document, macro execution, and host configuration, covering only one of the three expected points."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer incorrectly identifies the trojan as Remex instead of Qakbot, mentions a Word/PowerPoint document rather than the expected malicious Excel file with macros, and does not note the host's macro-trust configuration. It fails to cover any of the key expected points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer correctly provides the malicious domain and describes the fake Adobe Flash update page and that any click triggers a backdoored Flash download, matching three of the four expected points. It omits the detail that the campaign was discovered in September 2019 by Amnesty's Security Lab, a notable missing point, so it falls short of a perfect score."
+        },
+        "score": 4
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer gives an incorrect domain and omits key details about the fake update warning, the behavior of clicking anywhere on the page, and the September 2019 discovery by Amnesty's Security Lab. It fails to address most expected points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not provide any of the specific checksum8 values (92 or 93) or the required URI lengths (any, 4, or 5) for the different architectures and modes. It claims the information is not present, which is incorrect, and fails to address the expected answer points."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The response provides no information about the checksum8 values or URI lengths, completely failing to address any of the expected answer points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly states the 60‑second interval and mentions use of Cookie fields, matching two of the three expected points. However, it omits the detailed list of data transmitted (check code, PID, system version, IP, computer name, account, 64‑bit flag), leaving a notable gap."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer fails to provide any of the expected key points. It does not state the 60‑second interval, does not mention using Cookie fields, and does not list the data transmitted. Instead, it admits lack of information and asks for clarification, which does not answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly states the campaign has been ongoing since at least October 2022, but it incorrectly identifies the initial detection trigger (phishing attachments) instead of the SoftEtherVPN tool. It also adds irrelevant details, missing the key expected point about SoftEtherVPN."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the campaign being active since October 2022, incorrectly dates the first observation to Q2 2023, and attributes the initial detection to a spear‑phishing PDF rather than the presence of SoftEtherVPN. It also omits any discussion of SoftEtherVPN as a free, open‑source, cross‑platform VPN. The response is factually inaccurate and misses all key expected points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer is factually incorrect and does not address any of the expected points. It claims Ryuk does not use a new .RYK extension, omits mention of ransom note names, and fails to note the custom monitoring rule, providing no relevant or accurate information."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer is factually incorrect (it says the extension is .RYUK instead of the correct .RYK) and omits the other expected points about ransom note filenames and monitoring rules. It therefore fails to address the question as required."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly provides the URL, matching the expected value, but omits the additional required details about the domain registration date/location and the document creation timing. Thus only one of three key points is covered."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The response does not provide the required URL, registration date, or document creation time; it instead asks for clarification and fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer fails to provide the correct file extension (.FEEDC) and omits the detail that Conti excludes files already with that extension. It incorrectly states that the extension cannot be determined, which contradicts the expected answer."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer is factually incorrect: it claims Conti uses a '.conti' extension, whereas the expected extension is '.FEEDC' and mentions exclusion of existing .FEEDC files. It fails to address any of the required points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer fails to provide any of the expected key details: it does not state the February 2025 leak date, the specific September 2023–September 2024 coverage period, the message count, or the MEGA/Telegram upload information. It only gives vague speculation about a 2025 leak, so it does not meet the factual accuracy, completeness, or relevance requirements."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not match any of the expected key points. It provides an incorrect leak date (July 2023 vs February 2025), wrong coverage period (Dec 2022‑Mar 2023 vs Sep 2023‑Sep 2024), omits the message count and the details about MEGA and Telegram re‑upload. Hence it fails to answer the question correctly."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not provide the expected domain (badriatimimi[.]com) and incorrectly claims no domain is mentioned, which is factually wrong. It fails to address the key point of the question."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer gives the domain bruteratel.com, which does not match the expected domain badriatimimi.com. It fails to provide the correct domain and thus does not address the key point required."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer accurately provides the 66% figure and correctly attributes it to Cisco Talos, covering all expected points with precise and relevant information."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer provides an incorrect statistic (6% instead of the expected 66%) and thus fails to convey the key point that 66% of ransomware attacks in Q4 2020 involved Cobalt Strike as reported by Cisco Talos."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 0,
+          "reasoning": "Error: Invalid \\escape: line 1 column 86 (char 85)"
+        },
+        "score": 0
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 0,
+          "reasoning": "Error: Invalid \\escape: line 1 column 154 (char 153)"
+        },
+        "score": 0
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly identifies the CVE (CVE-2017-0199) and the malicious document name, matching two of the expected points. However, it omits the details about the downloaded RTF file from update.microsoft-office.solutions/license.doc and the VBA script loaded from http://38.130.75.20/check.html, which are significant parts of the expected answer."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer fails to provide any of the expected points. It cites the wrong CVE (CVE-2017-11882 instead of CVE-2017-0199) and does not mention the document name, the malicious download URL, or the VBA script location. Therefore it does not answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer correctly identifies CVE-2017-0199, the malicious document name, and the VBA script URL. It mentions the download of an RTF file but omits the specific expected URL (update.microsoft-office[.]solutions/license.doc), so one key detail is missing."
+        },
+        "score": 4
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly identifies CVE-2017-0199 as the exploited vulnerability, which matches one of the expected points. However, it omits all other required details: the specific malicious document name, the download of the RTF file from update.microsoft-office.solutions/license.doc, and the loading of the VBA script from the given IP address. Hence, only a small portion of the expected answer is covered."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly states the 60‑second heartbeat interval and mentions the use of the Cookie field, covering the first two expected points. However, it omits the third point about the feature being designed to evade detection by security software and firewalls, resulting in a notable gap."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer states a 30‑second heartbeat interval, contradicting the expected 60‑second interval, and omits both the use of the Cookie field for data transmission and the evasion purpose. Consequently, it fails to address any of the key expected points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer correctly lists all three expected cloud storage services (Dropbox, Google Drive, OneDrive) with no inaccuracies or omissions."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly lists the three expected cloud services (Dropbox, Google Drive, OneDrive), but also adds several additional services that were not part of the expected answer and may be inaccurate. While the core points are covered, the extraneous and potentially incorrect information reduces the overall quality."
+        },
+        "score": 3
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer correctly identifies and describes all three expected components—Beacon, Team Server, and Cobalt Strike Client—matching the expected answer points without errors or omissions."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer correctly identifies and describes all three main components—Beacon, Team Server, and Cobalt Strike Client—matching the expected definitions. It provides accurate, detailed explanations without errors or irrelevant information, covering the key points comprehensively."
+        },
+        "score": 5
+      }
+    },
+    {
+      "question_id": "Q001",
+      "question_type": "FACTUAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly identifies a phishing email as the initial infection vector, which aligns with the general expectation. However, it omits critical details required by the expected answer: it does not mention that the email was a socially engineered spear‑phishing message, did not note the malicious archive link, the crafted reply‑thread appearance, or the forged sender address. The lack of these key points results in an incomplete and insufficient response."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The response does not provide any of the expected answer points about the spear-phishing email, malicious archive, reply thread, or forged sender. It instead asks for clarification, failing to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer clearly explains that beacon detection is reactive and requires an already compromised endpoint, while hunting team servers is proactive and does not depend on a patient zero. It emphasizes cutting off the attacker before any breach, enabling preventative actions, and aligns with the principle that prevention is better than cure, covering all expected points with accurate and specific details."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer covers the main ideas of why hunting Cobalt Strike team servers is more proactive than detecting Beacon payloads, highlighting early kill‑chain interruption, lack of need for an infected endpoint, and network‑wide visibility. It aligns with the preventive defense theme. It does not explicitly label Beacon detection as reactive, but conveys that implication, so a minor point is missing, keeping it at a good but not perfect match."
+        },
+        "score": 4
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer fully covers all expected points: it identifies intelligence gathering as the motivation, specifies the medical laboratory and shipping company targets in Asia (potential COVID-19 relevance), describes the toolset enabling persistent, stealthy access, privilege escalation, and lateral movement, notes remote access capabilities, and cites the lack of observed data exfiltration while linking the targeting pattern and tools to espionage intent. The response is accurate, complete, on‑topic, and provides concrete details."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address the expected motivation of intelligence gathering focused on COVID‑related medical and shipping targets in Asia. It instead describes a state‑espionage campaign targeting water‑management infrastructure, which is unrelated. While it mentions persistence, lateral movement, and remote access, it omits the key target sectors, the lack of observed exfiltration, and the specific context linking the campaign to COVID‑19 espionage. Consequently, the response fails to meet the required points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected attribution details such as the PDB debug path showing the 'shenno' username, the prior observation of that username in March 2019 NilePhish campaigns, the shared Offshore Servers hosting provider, the registration of additional NilePhish domains with the same registrar, or CheckPoint's independent confirmation. It only provides a generic description of monitoring and technical similarity, which does not meet the specific points required."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected attribution details such as the PDB debug path with the 'shenno' username, the prior NilePhish campaigns, the Offshore Servers hosting provider, the September 2019 domain registrations, or CheckPoint's independent confirmation. It provides unrelated network‑level analysis, thus failing to address the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer accurately explains that Cobalt Strike loaders run entirely in memory, use in‑memory evasion techniques, and avoid file‑based detection, aligning with most expected points. It mentions dynamic stages and memory injection, covering the necessity of memory analysis. It omits an explicit mention of \"statically armored\" payloads and the specific practice of examining memory deltas, but overall provides a comprehensive and correct explanation."
+        },
+        "score": 4
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer addresses most of the expected points: it explains that Cobalt Strike loaders run primarily in memory, use in‑memory evasion techniques (reflective DLL, process hollowing), and are hard to detect with file‑based methods. It emphasizes that memory dumps reveal the loader and decrypted beacon, aligning with the need to examine memory deltas. It omits a direct mention of statically armored payloads that refuse execution, but overall provides a comprehensive and accurate justification for memory analysis."
+        },
+        "score": 4
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected specific points (Qakbot maldoc, rundll32, PowerShell/Cobalt Strike, specific C2 ports, Bloodhound/ADFind reconnaissance, ADMIN$ share lateral movement, or ransomware deployment capability). It provides a generic, unrelated overview and lacks the required factual details, making it incorrect and incomplete."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The response provides a generic, high‑level narrative about typical attack phases and techniques, but none of the specific expected details are addressed (Qakbot maldoc, rundll32.exe, exact Cobalt Strike C2 ports, Bloodhound/ADFind enumeration, ADMIN$ share deployment to Domain Controllers, and the pre‑ransomware capability). It stays on topic broadly but fails to answer the question as required."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer accurately describes QAKBOT providing initial access and maintaining the backdoor, handing the compromised environment to DoppelPaymer developers who then handle encryption and payment negotiations. It aligns with the expected points, though it does not explicitly emphasize the evolution from QAKBOT's original banking Trojan role to a partnership-based ransomware model, a minor omission."
+        },
+        "score": 4
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly notes that QAKBOT operators provide initial access and that the ransomware developers receive that access, covering the first two expected points. However, it fails to mention that DoppelPaymer developers handle payment negotiations themselves and does not explicitly discuss the evolution of QAKBOT from a banking trojan to a partnership model in 2020. The response includes extra, less relevant details, resulting in a partial but incomplete answer."
+        },
+        "score": 3
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer accurately addresses the key points: it notes the reliance on Cobalt Strike as an automated platform, cost savings versus custom malware, and the lack of custom coding, indicating a less mature, more accessible attack. It explains why this falls short of a full APT. While it implies broader access and democratization, it doesn't explicitly mention nations or organizations without elite hacker groups, which is a minor omission. Overall the answer is relevant, factual, and detailed."
+        },
+        "score": 4
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer focuses on generic Antiy classification criteria (persistence, coordination, attribution, etc.) and does not address any of the expected points such as reliance on Cobalt Strike, cost savings, lack of custom code, or the democratization of advanced capabilities. It fails to answer the specific question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly describes the intentional delay (reboot) and the fileless execution that hides shellcode in an innocuous JavaScript, covering two of the five expected points. However, it omits the use of Cobalt Strike's Malleable C2 feature and the geofencing logic excluding RU and US, and adds unrelated techniques (LOLBins, malformed PE) that were not asked for. The answer is also cut off, indicating incompleteness. Overall, it provides some correct information but has notable gaps."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The response does not address any of the expected evasion techniques and instead asks for clarification, providing no relevant or accurate information."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer accurately covers all expected points: it identifies the mistaken export of internal functions, specifies the libraries involved, notes that the stripped binary's export names can be demangled, explains that this reveals naming conventions, prototypes, and data types, and highlights the intelligence value regarding the adversary's development practices and toolchain."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected points. It incorrectly describes the mistake as leaving debug symbols instead of the actual mistake of erroneously exporting internal functions, and it fails to mention the exported library functions, demangling, naming conventions, or the intelligence gained about the adversary's development practices."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected evidence: the digitally signed self-extracting executable (p.exe), the stolen AI Squared certificate, its prior use by OilRig, or the malicious 'ssl.docx' document from February 2017. Instead, it discusses unrelated overlap in targets and techniques, which does not address the specific connection evidence required."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected points. It discusses unrelated topics such as shared malware families, C2 infrastructure, and phishing tooling, and fails to mention the stolen digital certificate, the p.exe executable, the ssl.docx document, or the specific link between CopyKittens and OilRig via the certificate. Hence it does not answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer describes generic reasons Cobalt Strike is hard to detect (camouflaging, signature evasion) but fails to mention the specific defense evasion features—Artifact Kit and Malleable C2 Profiles—nor does it note that detection requires both host‑based and network‑based monitoring. Major expected points are missing, resulting in a poor coverage."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the expected key evasion features (Artifact Kit and Malleable C2 Profiles) or the need for both host- and network‑based detections. It focuses on other aspects (signatures, encryption, polymorphism) that were not part of the expected answer, resulting in a failure to address the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly identifies foreign espionage as the primary focus, lists the same target countries, and mentions relevant target sectors (government, academic, defense contractors). However, it does not explicitly state that the group indiscriminately exfiltrates large volumes of documents, spreadsheets, personal data, configuration files, and databases, and the description of the objective is cut off and less detailed than the expected answer. The response is therefore partially complete but missing key specifics."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly identifies foreign espionage as a motive and mentions gathering intelligence, but it omits key expected details such as the indiscriminate exfiltration of large volumes of documents, spreadsheets, personal data, configuration files and databases, the specific focus on academic institutions, defense companies, and MoD sub‑contractors, and the main target countries (Israel, Saudi Arabia, Turkey, United States, Jordan, Germany). It also adds unrelated targets (e.g., Indonesia) not mentioned in the expected answer, showing incomplete and partially inaccurate coverage."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions Cobalt Strike beacons and PsExec usage, which aligns with two of the expected points, but it omits key details such as subnet enumeration saved to files, the use of batch files to copy malware, and the execution of the Conti ransomware v3 payload. It also adds unrelated information about initial social‑engineering tactics, leading to an incomplete and only partially correct response."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected specific points. It provides a generic attack overview using MITRE ATT&CK techniques and never mentions Cobalt Strike beacons, subnet enumeration, batch files, PsExec, or Conti ransomware v3. As a result it fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly highlights that Ryuk uses targeted attacks, prior footholds, and Cobalt Strike for reconnaissance and lateral movement, distinguishing it from generic ransomware that drops a standalone payload. However, it omits several expected points: it does not mention traditional use of exploit kits, brute‑forcing RDP connections, deployment specifically to business‑critical systems for maximum disruption, or explicitly stating the implication of highly sophisticated actors. The explanation is detailed but incomplete, leading to an adequate but not comprehensive coverage."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer correctly contrasts traditional ransomware (exploit kits, phishing) with Ryuk's targeted, foothold‑based delivery, and notes lateral movement and persistence, implying sophisticated actors. However, it omits specific mention of brute‑forcing RDP and the use of Cobalt Strike, and does not explicitly state deployment to business‑critical systems for maximum disruption."
+        },
+        "score": 4
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer covers only a subset of the expected points: it mentions specialized roles and a hierarchical structure, which aligns loosely with the expected disciplined, compartmentalized organization. However, it fails to address the key details about the Monday‑to‑Friday work schedule, peak messaging hours, weekend rest, the start‑up style culture, and the members' initiative, creativity, and autonomy. The response also adds unrelated information about the communication platform and infrastructure, which were not asked for. Overall, many expected points are missing, resulting in a low score."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly describes Black Basta's disciplined, compartmentalized structure, specialized roles, autonomy, and collaborative problem‑solving, aligning with several expected points. However, it omits key details about the Monday‑to‑Friday work schedule, peak activity hours (08:00‑18:00), weekend rest, and the explicit characterization as a 'start‑up style' enterprise, resulting in an incomplete coverage."
+        },
+        "score": 3
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer accurately covers all expected points: it explains that the malleable C2 profile lets attackers modify C2 traffic, can disguise that traffic as legitimate services (e.g., Google/Bing), enables communication to evade network security detection, and references the use of a profile settings file. It provides concrete details without factual errors, fully addressing the question."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer correctly explains that the malleable C2 profile lets attackers modify C2 traffic, uses a plain‑text profile file, and can mimic legitimate services (e.g., Google) to evade detection. It covers all expected points and adds accurate, relevant details without inaccuracies."
+        },
+        "score": 5
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer accurately covers all expected points: it notes the small size and low footprint of staged payloads, the limited initial functionality that aids AV evasion, the retrieval and reflective in‑memory loading of the larger payload, the ability to embed stagers in resource‑constrained exploits, and the flexibility of delivering stagers via various techniques. The explanation is clear, specific, and free of inaccuracies."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer accurately covers all expected points: it explains that staged payloads are small and thus less likely to trigger AV, that the initial stub has limited functionality, that the larger beacon.dll is fetched later and loaded via reflective injection, and notes benefits like fitting exploit size constraints and flexible delivery methods. It provides concrete details and no factual errors."
+        },
+        "score": 5
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer accurately covers all expected points: it mentions stealing IP (IC chip designs, SDKs, source code), cites the motive of competitors or countries seeking competitive advantage, and frames it as business or state-driven industrial strategy. The response is precise, relevant, and contains no inaccuracies."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer correctly identifies industrial espionage aimed at acquiring semiconductor IP (chips, SDKs, designs, source code) to give China a competitive advantage, which matches the expected motivation. It links the motive to a nation-state's industrial strategy and competitive rivalry. While it does not mention the stolen file names explicitly, it covers the core points and adds relevant context, making it comprehensive but slightly less complete than the ideal answer."
+        },
+        "score": 4
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the specific steps outlined in the expected answer (malicious Excel attachment, DDE, rundll32, iroto.tio, mobsync.exe, specific reconnaissance commands, Bloodhound/ADFind, or Pass-the-Hash lateral movement). It provides vague, unrelated commentary and fails to address the required details."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer provides a generic, high-level description of typical attack phases and MITRE techniques, but does not mention any of the specific actions, files, tools, or commands detailed in the expected answer (e.g., excel.exe DDE, rundll32, mobsync.exe, Bloodhound, ADFind, Pass-the-Hash). Therefore it fails to address the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the WebDAV username or the specific technical artifact (the username) that led to the 'Lockeman' name, nor does it explain that ANSSI uses infrastructure-specific indicators for naming. Instead, it speculates about generic naming practices, providing inaccurate or unrelated points. Consequently, it fails to address the key expected points."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer captures the general idea that ANSSI names groups based on unique technical artifacts, reflecting an evidence‑first methodology. However, it completely misidentifies the specific artifact (claiming a 'lockean.exe' file) and omits all expected details about the WebDAV username used during the Egregor incident at Ouest‑France, the focus on infrastructure‑specific indicators, and the attention to operational security details. This significant factual error and missing key points lead to a low score."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly describes configuring an alternate phone number and intercepting the OTP, and it mentions the mistake that resulted in a Chinese-language message, covering several expected points. However, it omits the initial access to the SharePoint Online document and does not explicitly state that the language was based on browser settings (Simplified Chinese). Thus it is partially complete but missing key details."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected points. It describes a different vulnerability (CVE-2023-2853) and unrelated details, missing all required elements such as SharePoint document access, phone number manipulation, SMS OTP interception, the Chinese-language test mistake, and language settings. Hence it fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly mentions the XOR‑encrypted beacon configuration, the AES‑256‑CBC/HMAC‑SHA‑256 encryption for tasks, and that the AES key is derived from the first 16 bytes of decrypted metadata. However, it incorrectly describes the heartbeat mechanism (expects RSA‑PKCS1 encrypted metadata in HTTP cookies, but the answer says AES‑CBC) and only partially matches the callback format. Significant inaccuracies and missing points lower the score."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected points. It discusses transport channels, RSA‑2048 key exchange, AES‑CTR, and HMAC but completely omits the specific heartbeat cookie mechanism, AES‑CBC with HMAC for tasks, HTTP POST callback format, AES key derivation from metadata, and the XOR‑encrypted beacon configuration. Consequently it fails to answer the question as required."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly identifies the two post‑infection frameworks (Cobalt Strike and SystemBC) and notes SystemBC’s SOCKS5 proxy and exfiltration use, matching two expected points. However, it omits critical details required for Cobalt Strike: the DLL hijacking deployment using VLC MediaPlayer and the specific C2 IP address (193.106.191.202). These omissions constitute significant gaps, resulting in a low score."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer only mentions Cobalt Strike in a generic way and omits all critical details: no DLL hijacking with VLC, no mention of SystemBC, its SOCKS5 proxy role, its use for data exfiltration, and no C2 IP address. It adds unrelated tools, showing a major lack of completeness and factual accuracy."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The response only loosely mirrors the multi‑phase structure but omits key details from the expected answer. It does not mention spearphishing malicious documents or the installation of remote‑access tools (Phase 1). While it notes Cobalt Strike usage, it lacks mention of privilege‑escalation exploits and Mimikatz credential theft (Phase 2). The execution phase references Conti ransomware rather than CLOP and fails to describe deployment via GPO or scheduled tasks, nor does it note the check for WORKGROUP membership. Overall, the answer is incomplete and contains inaccuracies, warranting a low score."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer captures the general flow of initial compromise, credential dumping, AD enumeration, lateral movement, and persistence, which aligns loosely with the expected phases. However, it omits several critical specifics required by the expected answer: it does not mention the use of Cobalt Strike in the takeover phase, the deployment of CLOP ransomware via GPO or scheduled tasks, nor the explicit check for WORKGROUP membership to target corporate AD environments. The response is overly generic and missing key details, leading to a low score."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q002",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly identifies the targeted nature against Chinese government agencies, the anti‑detection/stealth functions, and notes that the attack is APT‑level despite using a commercial platform. However, it omits several expected technical characteristics such as in‑memory execution, lack of hard‑disk writes, multi‑beacon communication, and the resulting forensic challenges. Consequently, while generally accurate, the answer is incomplete."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer captures several key aspects: it notes the targeted nature of the campaign, the use of advanced anti‑detection techniques, and that the attack's capability approaches APT‑level despite using a commercial platform. However, it does not specifically mention the Chinese government agencies, nor does it detail the memory‑only execution, lack of hard‑disk writes, multi‑beacon communication, and the resulting forensic difficulty. These omissions prevent it from fully meeting the expected answer points."
+        },
+        "score": 3
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected MITRE ATT&CK techniques (T1486, T1490, T1027.002, T1036, T1564.003, T1497.001). Instead it incorrectly claims no techniques are tied to Impact or Defense Evasion, which directly contradicts the expected answer. Hence it fails to answer the question."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The response does not provide any of the expected ATT&CK technique identifiers and instead asks for additional context, failing to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly covers the use of powershell.exe, downloading encrypted data, WinExec to launch PowerShell, and in‑memory execution without disk writes. However, it omits the base64/Gzip decryption detail and does not mention the creation of a suspended rundll32.exe process for Module 3 injection, resulting in incomplete coverage of the expected points."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions PowerShell execution and in‑memory shellcode, which aligns with a couple of expected points, but it omits most specific techniques: it does not describe downloading encrypted data, base64 + Gzip decryption, creation of a suspended rundll32.exe process, use of WinExec to invoke powershell.exe, or the claim that no files are written to disk. The coverage is therefore partial and incomplete."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected files (ecmd.exe, cf.ini, ecmd.exe.lnk) or their purposes. Instead it lists unrelated malware components, showing a complete mismatch with the expected answer."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected files (ecmd.exe, cf.ini, ecmd.exe.lnk) or their purposes, and instead describes completely different artifacts. It fails to address the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected DLL names (AppvIsvSubsystems64.dll, msword.dll, envsrv.dll, mschost.dll) nor their sizes, hashes, or correct order. It provides unrelated or unknown modules, contradicting the expected details, thus failing to answer the question."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected DLL modules, sizes, or SHA256 hashes. It lists entirely different DLL names, provides unrelated roles, and omits the DLL sideloading detail with Note.exe. Hence it fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions several key indicators (default certificate serial, port 50050, JARM fingerprint, extra null byte) but omits many expected points such as the exact JARM signature value, NanoHTTPD 404 response details, malleable C2 profile certificates, and DNS redirector analysis. It also only provides one Shodan query and truncates the rest, failing to list all demonstrated queries. The response is partially correct but incomplete."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer only mentions the default port 50050, while missing all other expected technical indicators (default certificate serial, extra null byte, JARM signature, NanoHTTPD 404 response specifics, malleable C2 profile certificates, DNS redirector analysis) and does not list the Shodan queries demonstrated in the report. The response is largely unrelated to the expected points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer accurately lists all expected self-developed tools, public frameworks, web exploitation tools, and notes the DNS-based C2/exfiltration characteristic, matching each expected point with clear details."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the core self‑developed tools (TDTESS, Vminst, NetSrv, ZPP, Matryoshka), the specific public tools (Cobalt Strike, Empire) or the web exploitation tools (Havij, Acunetix, sqlmap) expected. It only lists a few unrelated or generic tools (custom RAT, StealthKey, Mimikatz, Metasploit) and omits the notable DNS C2 characteristic, thus failing to address the key points of the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer only mentions two of the expected techniques (T1055 and T1083) and omits the majority of required points (T1059, T1547, T1562, T1016, T1489). It also adds unrelated techniques not asked for, indicating a significant gap in completeness despite being factually accurate for the few techniques it does list."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the majority of the expected MITRE ATT&CK techniques (T1547, T1055, T1562, T1083, T1016, T1489) and instead lists unrelated techniques. Only a sub-technique of T1059 is loosely covered, resulting in a failure to address the question's key points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer lists all five expected renamed filenames (jucheck.exe, RecordedTV.ms, teredo.tmp, update.exe, msadcs1.exe) accurately and provides relevant context without omissions or inaccuracies."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected renamed filenames (jucheck.exe, RecordedTV.ms, teredo.tmp, update.exe, msadcs1.exe) and instead provides unrelated filenames (Rar.exe, Rar2.exe, etc.). It fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions Sysmon events 17/18 and a Sigma rule, but it completely omits the specific default pipe names (msagent‑xx and MSSE‑xxx‑server) and the details about their modifiability. It also provides incorrect pipe name examples that are not part of Cobalt Strike's defaults, and fails to reference the correct authors of the Sigma rule. Thus, it covers only a small portion of the expected points and contains inaccuracies."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the expected default pipe patterns 'msagent-xx' or 'MSSE-xxx-server', omits the correct Sysmon event IDs (17 and 18), fails to reference the Sigma rule, and provides unrelated pipe names and wrong event ID. It therefore does not answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly notes that APT-TOCS runs entirely in memory, uses powershell.exe to execute shellcode, employs Cobalt Strike Beacon and sends heartbeat data (including via Cookie fields). However, it omits key details such as the XOR 0x69 encryption of IOCs, RSA/BASE64 encryption of heartbeat packages, downloading encrypted data, and the rundll32.exe injection step. The response is partially accurate but incomplete, covering only about half of the expected points."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected technical characteristics such as PowerShell‑executed shellcode, in‑memory execution, encrypted data handling, Cobalt Strike beacon, XOR encryption of IOCs, RSA/BASE64 heartbeat via cookies, or rundll32 injection. It provides a generic ATT&CK‑style overview that is unrelated to the specific points, making it incomplete and inaccurate."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer accurately describes Coba PROXY as a custom-built proxy infrastructure used to obfuscate Cobalt Strike traffic and details the multi‑tiered SOCKS5 proxies, SSH tunnels, and domain‑fronting techniques. It explains traffic routing through multiple relays and mentions automatic rerouting for resilience. However, it does not mention the use of TLS encryption with Let's Encrypt certificates, which is one of the expected points. No factual errors are present, but the missing detail prevents a perfect score."
+        },
+        "score": 4
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions that Coba Proxy tunnels C2 traffic and can chain hops, aligning loosely with the idea of multi‑hop proxies, but it fails to identify it as a custom infrastructure for obfuscating Cobalt Strike traffic, omits details about multi‑tiered SOCKS5, SSH tunnels, domain‑fronting, TLS with Let’s Encrypt, and automatic rerouting for resilience. The response provides generic proxy functionality rather than the specific expected characteristics, resulting in a poor coverage of key points."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the required IP addresses or suspicious domains listed in the expected answer and incorrectly claims no such information is present. It fails to address the question."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected IP addresses or suspicious domains. It provides unrelated IP ranges and a different domain, showing a complete mismatch with the expected key points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected lateral movement commands (psexec, psexec_psh, winrm, ssh, direct shell) and provides incorrect information about SMB beacons being the default mechanism. It fails to address the question's core points."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer only mentions psexec, which is one of the expected commands. It completely omits the other required defaults (psexec_psh, winrm, ssh, and direct shell usage) and adds many unrelated commands not asked for. Hence it covers very few key points and contains significant omissions."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer lists all five expected self‑developed tools (TDTESS, Vminst, NetSrv, ZPP, Matryoshka v2) and correctly describes their roles. It even adds Matryoshka v1, which is extra but not incorrect. The information is accurate, complete, and on topic."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected self-developed malware/tools (TDTESS, Vminst, NetSrv, ZPP, Matryoshka v2). It only describes an unrelated \"KITTY-RAT\" and fails to address the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly identifies the affected Java versions (1.7u21 and older, 1.6u45 and older) but completely misidentifies the CVEs, listing unrelated 2015 CVEs instead of the expected CVE-2011-3544, CVE-2013-2465, CVE-2012-4681, and CVE-2013-2460. This major factual error and omission of the key CVE details means the answer only partially satisfies the question."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected CVEs (CVE-2011-3544, CVE-2013-2465, CVE-2012-4681, CVE-2013-2460) nor the correct affected Java version ranges. It provides entirely different CVEs and version information, making it factually inaccurate and incomplete."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly notes that Chimera used cloud‑based C2 servers (Google Cloud and Azure) and employed in‑memory PowerShell execution of a Cobalt Strike stager, covering the fileless attack aspect. However, it omits key details about the RAT masquerading as a Google Update and the specific use of legal cloud domains such as appspot.com and azureedge.net. The added mention of Task Scheduler persistence is not part of the expected answer. Overall the response is partially correct but misses notable expected points."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer only loosely mentions Azure-hosted domains, which touches on the use of legal cloud services, but fails to address the core expected points: it does not discuss Cobalt Strike masquerading as Google Update, does not note Google Cloud Platform servers, omits Appspot.com/azureedge.net specifics, and does not describe fileless memory injection via PowerShell. Moreover, the provided details are largely irrelevant or inaccurate, resulting in a poor coverage of the expected answer."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "ANALYTICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly mentions the use of very large payloads (40 MB+), which matches one expected point. However, it fails to address the key details about masquerading malicious code with legitimate JavaScript libraries (e.g., chroma.js), the multiple layers of JavaScript obfuscation, the anti‑sandbox loops, and the insertion of random strings to inflate file size. Additionally, it introduces unrelated information (water‑hole sites, SEO poisoning, process‑stealth chain) that was not required. Overall, only a small portion of the expected answer is covered, resulting in a poor score."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected points. It discusses drive-by delivery, DLL side-loading, anti-debugging, and persistence mechanisms, which are unrelated to the expected tactics of large payload size, masquerading with legitimate JavaScript libraries, JavaScript obfuscation, execution-time loops, or random string inflation. Therefore it fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer accurately describes RSA‑PKCS#1 encryption of heartbeat data in cookies, AES‑256‑CBC with HMAC‑SHA‑256 for tasks, derives the AES key from the first 16 bytes of decrypted metadata, and notes that callbacks use the same AES scheme with size fields. All points are correct and detailed, with only minor omission of an explicit statement about evading detection, which does not affect correctness."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address the specific expected points. It provides a generic and mostly inaccurate description of Cobalt Strike encryption, uses the wrong RSA padding (OAEP instead of PKCS1), omits the RSA‑encrypted heartbeat metadata in a cookie, does not mention AES‑256‑CBC with HMAC‑SHA‑256 for tasks, does not explain the AES key derivation from decrypted metadata, and misses the callback payload size indicator. Overall it fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer lists four stages, but the details for Stage 1 and Stage 2 are inaccurate and miss key expected points (user enumeration/password changes and copying a legitimate service before replacement). Stage 3 and Stage 4 are largely correct, but the overall answer is incomplete and contains factual errors regarding the first two stages."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected specific stages. It provides a generic ransomware execution flow (delivery, credential dumping, persistence, encryption) that is unrelated to the four detailed DOPPELPAYMER stages (user enumeration and password changes, service registration via legit service copy, BCD and Group Policy modifications, reboot before encryption with .doppeled extension). Therefore it fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly describes several key techniques: exclusive use of native NT APIs, dynamic resolution via hashing with two tables, and avoidance of clear‑text API strings, which align with multiple expected points. However, it omits important details such as the custom syscall stubs used to bypass hooked native functions and the specific mapping injection method involving spawning sethc.exe. These missing elements constitute notable gaps, preventing a higher score."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected evasion techniques (native API usage, function hashing, custom syscall stubs, mapping injection via sethc.exe, direct Nt* syscalls, or hash/address tables). Instead it describes unrelated sandbox checks, so it fails to address the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer fails to provide any of the expected technical characteristics or IOCs (file hashes, compile date, encryption details, .Cllp files, VSS behavior, digital signature, or service execution). Instead, it offers unrelated general information and incorrectly states that no IOCs are available, which does not address the question."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected key points. It misses all listed items such as the specific file hashes, compile date, RC4 encryption method, .Cllp files, VSS behavior, digital signature, and service execution. Instead it provides unrelated technical details that are not part of the expected answer."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer covers only a subset of the expected points: it mentions domain spoofing, the use of 'technology' in domain names, and provides example domains, and vaguely references HTTP header fingerprints. However, it omits key details about the registrar (Namecheap), the TLS certificate types and hash, the hosting providers (HostWinds and LeaseWeb), and the specific Server and Keep-Alive header values. The coverage is therefore incomplete and lacks several critical expected characteristics."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected key points. It describes generic Azure and Akamai hosting details and unrelated domain patterns, but omits the spoofed domain naming convention, use of 'technology' in names, Namecheap registrar, TLS certificate specifics, HostWinds/LeaseWeb hosting, and the HTTP header values that were required."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer accurately identifies Bloodhound and AdFind as the AD enumeration tools, describes their output storage (.JSON in Downloads for Bloodhound, .CSV for AdFind) and notes deletion, and correctly mentions PowerShell used to enumerate Domain Controllers. All expected points are covered with correct details; extra information does not detract."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions Bloodhound and AdFind but provides incorrect details about the tools used (e.g., PowerView instead of generic PowerShell) and misstates where and how the outputs are stored (network share, hidden folders, not the user's Downloads folder or deleted CSV). It fails to capture the expected specifics about output formats and locations, and includes many extraneous or inaccurate details."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer only mentions the FSMain (module 02) file‑listing capability, which matches one of the expected points. It completely omits all other listed modules and their surveillance functions, and incorrectly suggests that no other capabilities are confirmed. Thus it covers very few key points and has significant omissions."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions a few relevant capabilities (keylogger, screen capture, webcam, microphone) but fails to address the majority of the expected module-specific surveillance functions such as file listing, shell command execution, FSEvents‑based file monitoring, virtual‑keyboard keylogging, email stealing, Wi‑Fi enumeration, remote device file listing, and the cryptography module. It also adds unrelated capabilities (clipboard monitoring, process enumeration) that were not asked for. Therefore the response is largely incomplete and only partially covers the expected points."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q003",
+      "question_type": "TECHNICAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer only mentions two of the expected tools (Ntlmrelay and HackBrowserData) and omits the majority of the listed items such as Process Dumper, BrowserGhost, Cobalt Strike Beacon, Meterpreter, Procdump, and the scanning tools. It also adds unrelated tools not in the expected answer, showing significant omissions and incomplete coverage."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer only mentions NTLM relay (partial overlap) and unrelated tools like Mimikatz and psexec, but omits the majority of expected tools (Process Dumper, BrowserGhost, HackBrowserData, Cobalt Strike Beacon, Meterpreter disguised as msedgeupdate.dll, Procdump, Gogo, AlliN, Fscan). It therefore fails to cover most key points and includes inaccurate or extraneous information."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE/CONTEXTUAL",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer only addresses SOC analysts and Incident Response, and does so with different phrasing than the expected questions. It omits product engineering, data scientists, and intelligence analysts entirely, and does not mention tailored deliverables for each XDR stakeholder as described. The response is incomplete and missing most key points, resulting in a poor score."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer outlines a generic 5‑phase CTI lifecycle and mentions that it serves all stakeholder types, but it does not identify the specific stakeholder groups (SOC, product engineering, data scientists, incident response, intelligence analysts) nor state the precise intelligence questions each group needs answered as outlined in the expected answer. Consequently, most of the key points are missing, though the response is factually correct about the lifecycle itself."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention ENVYSCOUT at all and incorrectly states that the campaigns use VirusTotal, MalwareBazaar, and MalShare, which contradicts the expected key points. It fails to address any of the required details."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention ENVYSCOUT at all and instead claims the shared mechanism is a compromised Microsoft O365/OneDrive environment, which contradicts the expected answer. It fails to address any of the expected points, providing incorrect information."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer accurately lists all primary target countries and most organization types, including government, academic, defense, municipal, IT firms, and mentions UN employees and watering‑hole media sites. However, it omits the specific detail that Israeli embassies and foreign embassies in Israel were also targeted."
+        },
+        "score": 4
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address the expected target countries (Israel, Saudi Arabia, Turkey, Jordan, Germany) or the specific organization types (government ministries, academic institutions, municipal authorities, sub‑contractors, news outlets, embassies). It instead lists unrelated regions and industries, showing a complete mismatch with the expected answer."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions Microsoft Teams‑based campaigns and the use of remote‑desktop tools, covering some aspects of initial access, but it omits several key expected points: there is no mention of TeamsEnum or TeamsPhisher, the fraud‑call gender‑targeted tactics, XLL‑based payloads, or QR‑code obfuscation using services like Bing, Salesforce, and Cloudflare. The response is also incomplete, cutting off mid‑section, so it fails to fully address the question."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected points such as Microsoft Teams-based campaigns, TeamsEnum/TeamsPhisher, fraud calls with RMM tools, XLL payloads, or QR code usage. Instead it describes unrelated phishing tactics, showing a complete mismatch with the expected answer."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer fails to mention any of the expected points. It states there is no evidence of a connection and does not discuss the stolen AI Squared digital certificate, its use by both groups, the signing of p.exe, or the implication of shared resources. This directly contradicts the factual information required, showing a complete omission of the key evidence."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the digital certificate stolen from AI Squared, its use by CopyKittens, its prior use by Oilrig, or the signing of p.exe in a malicious document campaign. It provides unrelated details about code reuse and infrastructure, failing to address any of the expected key points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly notes the same date and a statement that the attacks were part of a single campaign, covering two expected points. However, it omits the detection of suspicious activity on the DoH network on 13 May, does not mention Cobalt Strike beacons or the specific similarity of malware/tools, and does not attribute the statement directly to the NCSC. These are notable gaps, preventing a higher rating."
+        },
+        "score": 3
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected points. It provides vague, hypothetical evidence unrelated to the specific 13‑14 May 2021 HSE and DoH incidents, omits mention of Cobalt Strike beacons, the NCSC statement, and the shared malware/tools. It is off‑topic and lacks the required factual details."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE/CONTEXTUAL",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer only partially addresses the link between Ryuk and Cobalt Strike, providing generic sources but omitting the specific evidence of distribution via malicious Cobalt Strike use. It fails to mention the custom expert rules, the exact named pipe patterns (pipe\\MSSE* and pipe\\status_*), and the list of Cobalt Strike detection signatures expected. The pipe names given are unrelated to the expected patterns, indicating significant gaps and inaccuracies."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions that Ryuk is delivered via Cobalt Strike, covering the first expected point, but it completely omits all other required details: no mention of custom expert rules, no pipe patterns (pipe\\MSSE* or pipe\\status_*), and no reference to the listed Cobalt‑Strike detection signatures. Thus it is factually partial and lacks the majority of expected content."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the required ransomware families (CLOP and DarkSide are missing) and provides incorrect or vague infection vectors that do not match the expected specific vectors. It fails to address the key points of the question."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address the expected ransomware families (CLOP and Conti are missing) and provides incorrect infection vectors for the families it does list. It fails to cover the key points required."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer provides generic statements that APT-TOCS uses Cobalt Strike and mentions Beacon, listeners, and PowerShell, but it does not address the specific evidence about Module 1 Beacon strings, Module 2 disassembly commands and XOR encryption, or Module 3 GET request patterns with cookie fields and 60‑second heartbeat. The key expected details are missing, making the response incomplete and only partially relevant."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions generic Cobalt Strike indicators (strings, beacon behavior, network patterns) but does not address the specific evidence expected for Modules 1‑3, such as the exact 'Beacon' strings comparison, identical disassembly commands with XOR encryption, or the GET request with Cookie fields and 60‑second heartbeat. It lacks the detailed module‑by‑module analysis required, making it incomplete and only partially correct."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the specific evidence required: the identical SkeletonKeyInjector malware, the modified RAR program, the Cobalt Strike backdoor named GoogleUpdate.exe, the detailed techniques (schtasks, credential dumping from domain controllers), or the precise target (semiconductor vendors in Hsinchu Science-based Industrial Park, Taiwan, 2018‑2019). It only gives a generic summary of similarity and group naming, which fails to address the expected key points."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected evidence points. It mentions unrelated malware hashes, C2 domains, file names, and generic TTPs, and completely omits the specific identifiers (SkeletonKeyInjector DLLs, modified RAR program, Cobalt Strike as GoogleUpdate.exe, schtasks/lateral movement, credential dumping from domain controllers, and the Taiwan semiconductor vendor targeting timeframe) that link Cases A and B."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE/CONTEXTUAL",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly notes the size and delivery differences between staged and stageless beacons, but it omits several expected key points: it does not mention the default XOR decryption key, reflective DLL loading used by both, nor the ability of staged beacons to embed in exploits with resource limits. The coverage is therefore incomplete and only partially addresses the question."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 3,
+          "reasoning": "The answer correctly describes the size differences, staged downloading vs. single delivery, and general execution flow, covering several core distinctions. However, it omits several expected points such as the use of named pipes, XOR decryption with the default key, reflective DLL loading, and the specific advantage of staged beacons for embedding in exploits with resource constraints. These omissions reduce completeness and specificity."
+        },
+        "score": 3
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected points. It focuses on generic traffic‑signature matches and mentions Talos, without referencing the 'Beacon' strings, the specific module comparisons (head data, request file name, IP address), the identical disassembled commands, XOR encryption, DLL download behavior, cookie usage, 60‑second request interval, or the Beacon mode shellcode. Therefore it fails to answer the question as intended."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer only vaguely mentions finding a Cobalt Strike beacon and generic static analysis signatures. It does not address the specific module‑by‑module comparisons, the exact Beacon strings, the cookie‑based data transmission, the 60‑second heartbeat, or the detailed command‑level similarities (XOR encryption, DLL download, function address handling) outlined in the expected answer. Many key evidence points are omitted and some details appear fabricated, resulting in a poor match."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE/CONTEXTUAL",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected CVE identifiers (CVE-2011-3544, CVE-2013-2465, CVE-2012-4681, CVE-2013-2460) and provides incorrect placeholder CVEs. It only vaguely references version ranges without the precise mappings and omits the described selection mechanism (System.getProperty polling). Thus it fails to address the key expected points."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer lists entirely different CVEs than the expected ones and does not mention any of the four specific vulnerabilities (CVE-2011-3544, CVE-2013-2465, CVE-2012-4681, CVE-2013-2460) nor the correct version‑range selection logic based on System.getProperty('java.version'). It therefore fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer correctly mentions the use of stolen credentials/password spraying, cloud-hosted C2 on Google/Microsoft services, and Windows Task Scheduler for persistence, which aligns with some expected points. However, it completely omits the actor attribution (Chinese state-sponsored) and the targeted sectors (semiconductor and aviation). It also fails to mention the replacement of the legitimate Chrome updater executable. Significant expected details are missing, leading to a low score."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected points. It focuses on technical deviations in Cobalt Strike usage (in‑memory beacon, custom TLS certs, service stager) and omits the actor's attribution, targeted sectors, initial access techniques, cloud C2 hosting, use of schtasks.exe, and the Chrome updater replacement. Therefore it fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer mentions some of the expected evidence (shared appspot.com/azureedge.net C2 domains, use of Cobalt Strike, password‑spraying/credential‑stuffing, NTDS.dit dumping, scheduled tasks, and OneDrive exfiltration), which aligns with the infrastructure and capability overlap points. However, it omits several critical expected items: the adversary's GMT+8 working hours and activity pause during Chinese Golden Week, the use of WinRAR, the strong filename/folder overlap across intrusions, the specific victim profile (semiconductors and aviation), and the reference to the pyramid of pain. Thus, while partially correct, the answer is incomplete and missing many key attribution indicators."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the specific expected points. It provides generic discussion of malware reuse, C2 infrastructure, and exploit reuse with unrelated examples, and completely omits the time‑zone evidence, the appspot.com/azureedge.net overlap, the detailed capability and filename overlaps, the targeted industries, and the pyramid of pain reference. Therefore it fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer fails to mention the majority of expected techniques (e.g., T1566, T1204, T1078, T1055, T1562, T1135, T1018, T1071) and provides incorrect or unrelated techniques instead. It also omits several lifecycle phases and includes incomplete or unrelated content, making it largely inaccurate and incomplete."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address the specific techniques asked for. It provides a generic list of unrelated ATT&CK techniques and phases, missing all expected points such as T1566, T1204, T1055, T1562, T1135, T1018, T1021, and T1071. It is therefore incorrect and fails to answer the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "easy",
+      "rag": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer correctly identifies the geographic targets (US, UK, Australia) and industry sectors (healthcare and finance) as expected. However, it omits the third key point about the threat actor being designated UNC2565 by Mandiant, resulting in a minor omission."
+        },
+        "score": 4
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the expected geographic targets (US, UK, Australia), nor the healthcare and finance industry focus, and it omits the UNC2565 designation. It provides unrelated regions and sectors, failing to address any of the key expected points."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 4,
+          "reasoning": "The answer accurately captures the chronological ransomware affiliations (DoppelPaymer, Maze, Egregor, ProLock, Sodinokibi, Grief) and notes key external drivers like the Maze shutdown and the emergence of Grief as a DoppelPaymer successor. It largely aligns with the expected timeline. However, it does not explicitly mention the Egregor dismantling in February 2021 as the trigger for switching to Sodinokibi, and the discussion of external factors is cut off, leaving that point less clear. Overall the coverage is strong with minor omissions."
+        },
+        "score": 4
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected timeline points (DoppelPaymer, Maze, Egregor, ProLock, Sodinokibi) or the external factors influencing those changes. It provides unrelated information about early Lockean activity and different affiliations, lacking the required facts, completeness, and relevance."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "medium",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer only partially addresses the expected points. It correctly notes that ransomware groups use many of the same tools as APTs, but it fails to mention the shared use of domain admin access, multiple persistence mechanisms, and data theft. It also does not state the two critical impacts of ransomware (complete IT shutdown and business disruption) nor the deployment timeline of 3‑4 months. Consequently, many key expected points are omitted, resulting in a poor coverage score."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The response discusses general differences between APTs and ransomware but fails to address the specific expected points: it does not mention shared domain admin access, multiple persistence mechanisms, and data theft; it omits the critical impacts of ransomware (infrastructure shutdown and business disruption); it does not note the use of similar tools; and it lacks the time‑to‑deployment detail (3‑4 months). Hence it is largely incomplete and only loosely relevant."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the specific evidence listed in the expected answer (ADMIN$ share execution path, service installation, or payloads on Domain Controllers). Instead it provides generic descriptions of Cobalt Strike listeners and remote C2 communication, which does not address the question about remote vs. local execution in the described incident."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention the ADMIN$ share execution path, the service installation, or the payloads dropped on the two Domain Controllers—key evidence points expected. It only provides generic remote execution clues unrelated to the specific indicators, resulting in a failure to address the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer fails to mention any of the key evidence expected (shared digital certificates, Cobalt Strike infrastructure, non‑Russian targeting checks, victim statistics, industry‑agnostic scope, or the double‑extortion darkweb site). Instead, it focuses on TA505 and unrelated details, showing major omissions and inaccuracies relative to the expected answer."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The response does not cover any of the expected evidence points: it never mentions the shared digital certificates, the common Cobalt Strike C2 infrastructure, the keyboard‑layout based targeting of non‑Russian countries, the victim count and Active Directory focus, the industry‑agnostic victim set, or the dark‑web double‑extortion site. Instead it provides unrelated details about code reuse and phishing, so it fails to answer the question as required."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer only scratches the surface by noting the SMB, HTTPS, and stager delivery channels, but omits almost all critical details from the expected answer: no mention of custom syscalls, sethc.exe injection for KoboldLoader; no reference to mimicking mscms.dll, fake exports, or EnumChildWindows for MagnetLoader; and no discussion of the DLL side-loading via Fortinet VPN installer or the libcurl modification for LithiumLoader. It also fails to note the shared goal of loading Cobalt Strike beacons. Hence it covers few key points and lacks accuracy and completeness."
+        },
+        "score": 2
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 2,
+          "reasoning": "The answer discusses Cobalt Strike loaders but omits virtually all of the expected key details: it does not mention the specific beacon ports (4444 vs 443), custom syscalls, sethc.exe injection for KoboldLoader, the mscms.dll mimicry and EnumChildWindows callback for MagnetLoader, or the Fortinet VPN side‑loading and libcurl modification for LithiumLoader. It provides unrelated characteristics (release era, generic encryption, persistence) that are not part of the expected answer, showing poor coverage and factual mismatch."
+        },
+        "score": 2
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected proxy IP addresses (185.25.50.x or 103.11.67.x), nor does it discuss their presence in Mac, Linux, or Android configurations, the use of port 443, or the TlvTypeConfigTargetProxy tag. Instead it lists unrelated IPs and details that are not part of the expected answer, showing a complete mismatch with the required points."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not mention any of the expected proxy IPs, ports, or configurations. It provides unrelated IP addresses, wrong ports, and no reference to Mac, Linux, Android variants, TlvTypeConfigTargetProxy, or the server 158.69.105.207. Hence it fails to address the question."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 5,
+          "reasoning": "The answer addresses all expected points: it states Hydrochasma is not linked to any known group, exclusively uses publicly available/living‑off‑the‑land tools, notes that this makes the attack stealthier and attribution harder, explains the lack of custom malware reduces unique signatures, mentions the detection/tracking challenges of legitimate tools, and references Symantec's inability to link the activity to known actors. The information is accurate, complete, and stays on topic."
+        },
+        "score": 5
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address the expected points. It focuses on custom code, hybrid languages, and bespoke C2 infrastructure, which contradicts the expected description of Hydrochasma as using only publicly available, living‑off‑the‑land tools and having no link to known groups. It omits the key points about being a newly identified actor, lack of custom malware signatures, and Symantec's inability to link it to known actors, and introduces several inaccurate details."
+        },
+        "score": 1
+      }
+    },
+    {
+      "question_id": "Q004",
+      "question_type": "COMPARATIVE/CONTEXTUAL",
+      "difficulty": "hard",
+      "rag": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The answer does not address any of the expected points—there is no mention of Mustang Panda, APT41, jQuery, the Malleable C2 feature of Cobalt Strike, the Hong Kong‑registered domain, or the exclusion of Russia and the US. It provides unrelated, generic observations, so it fails to meet the required answer."
+        },
+        "score": 1
+      },
+      "llm_only": {
+        "llm_judge": {
+          "score": 1,
+          "reasoning": "The response does not address any of the expected answer points. It discusses generic Chinese APT indicators, infrastructure, and malware families, but fails to mention Mustang Panda, APT41, jQuery usage, Malleable C2 features, the specific Hong Kong-registered domain, or the exclusion of Russia and the US. Hence it does not answer the question."
+        },
+        "score": 1
+      }
+    }
+  ]
+}
