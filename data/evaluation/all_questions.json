@@ -1,0 +1,1961 @@
+{
+  "total_questions": 100,
+  "total_reports": 25,
+  "reports": [
+    {
+      "file": "2015_apt_china_government.json",
+      "report_file": "ANALYSIS-ON-APT-TO-BE-ATTACK-THAT-FOCUSING-ON-CHINAS-GOVERNMENT-AGENCY-.pdf",
+      "report_title": "Analysis on APT-to-be Attack That Focusing on China's Government Agency",
+      "year": 2015,
+      "question_count": 4
+    },
+    {
+      "file": "2017_operation_wilted_tulip.json",
+      "report_file": "Operation_Wilted_Tulip_(1).pdf",
+      "report_title": "Operation Wilted Tulip: Exposing a cyber espionage apparatus",
+      "year": 2017,
+      "question_count": 4
+    },
+    {
+      "file": "2017_operation_wilted_tulip_clearsky.json",
+      "report_file": "Clearsky_Operation_Wilted_Tulip(07-25-2017).pdf",
+      "report_title": "Operation Wilted Tulip: Exposing a cyber espionage apparatus",
+      "year": 2017,
+      "question_count": 4
+    },
+    {
+      "file": "2018_apt_china_antiy.json",
+      "report_file": "antiy.net-ANALYSIS_ON_APT-TO-BE_ATTACK_THAT_FOCUSING_ON_CHINAS_GOVERNMENT_AGENCY.pdf",
+      "report_title": "Analysis on APT-to-be Attack That Focusing on China's Government Agency",
+      "year": 2018,
+      "question_count": 4
+    },
+    {
+      "file": "2020_chimera.json",
+      "report_file": "[TLP-White]20200415_Chimera_V4.1.pdf",
+      "report_title": "APT Group Chimera - APT Operation Skeleton Key Targets Taiwan Semiconductor Vendors",
+      "year": 2020,
+      "question_count": 4
+    },
+    {
+      "file": "2020_clop_ransomware.json",
+      "report_file": "Analysis_ReportCLOP_Ransomware.pdf",
+      "report_title": "CLOP Ransomware Attack Report - Focus on Corporate Attacks",
+      "year": 2020,
+      "question_count": 4
+    },
+    {
+      "file": "2020_fin_ransomware_evolution.json",
+      "report_file": "eu-20-Clarke-Its-Not-FINished-The-Evolving-Maturity-In-Ransomware-Operations.pdf",
+      "report_title": "It's Not FINished: The Evolving Maturity in Ransomware Operations",
+      "year": 2020,
+      "question_count": 4
+    },
+    {
+      "file": "2020_finspy_egypt.json",
+      "report_file": "German-made_FinSpy_spyware_found_in_Egypt,_and_Mac_and_Linux_versions_revealed___Amnesty_International.pdf",
+      "report_title": "German-made FinSpy spyware found in Egypt, and Mac and Linux versions revealed",
+      "year": 2020,
+      "question_count": 4
+    },
+    {
+      "file": "2020_malleable_c2_apt.json",
+      "report_file": "Multi-stage_APT_attack_drops_Cobalt_Strike_using_Malleable_C2_feature_-_Malwarebytes_Labs___Malwarebytes_Labs.pdf",
+      "report_title": "Multi-stage APT attack drops Cobalt Strike using Malleable C2 feature",
+      "year": 2020,
+      "question_count": 4
+    },
+    {
+      "file": "2020_ryuk_ransomware.json",
+      "report_file": "McAfee_Labs_Threat_Advisory_-_Ransom-Ryukv6.pdf",
+      "report_title": "McAfee Labs Threat Advisory: Ransom-Ryuk",
+      "year": 2020,
+      "question_count": 4
+    },
+    {
+      "file": "2020_talos_cobalt_strike.json",
+      "report_file": "Talos_Cobalt_Strike.pdf",
+      "report_title": "The art and science of detecting Cobalt Strike",
+      "year": 2020,
+      "question_count": 4
+    },
+    {
+      "file": "2020_talos_cobalt_strike_detection.json",
+      "report_file": "2020.09.11_Talos_-_The_art_and_science_of_detecting_Cobalt_Strike.pdf",
+      "report_title": "The art and science of detecting Cobalt Strike",
+      "year": 2020,
+      "question_count": 4
+    },
+    {
+      "file": "2021_asec_report.json",
+      "report_file": "ASEC_REPORT_vol.103_ENG.pdf",
+      "report_title": "From Kill Chain to Ransomware: Comprehensive Analysis on Cobalt Strike 2021",
+      "year": 2021,
+      "question_count": 4
+    },
+    {
+      "file": "2021_certfr_cti.json",
+      "report_file": "CERTFR-2021-CTI-009.pdf",
+      "report_title": "Identification of a New Cyber Criminal Group: Lockean",
+      "year": 2021,
+      "question_count": 4
+    },
+    {
+      "file": "2021_ctir_casestudy.json",
+      "report_file": "CTIR_casestudy_2.pdf",
+      "report_title": "Cobalt Strikes Out - Cisco Talos IR and SecureX team up with client to repel attack",
+      "year": 2021,
+      "question_count": 4
+    },
+    {
+      "file": "2021_finding_beacons.json",
+      "report_file": "sneak-peek-ch1-2-finding-beacons-in-the-dark.pdf",
+      "report_title": "Finding Beacons in the Dark: A Guide to Cyber Threat Intelligence",
+      "year": 2021,
+      "question_count": 4
+    },
+    {
+      "file": "2021_hse_conti.json",
+      "report_file": "HSE_Conti_140521_UPDATE.pdf",
+      "report_title": "NCSC Alert: Ransomware Attack on Health Sector - UPDATE",
+      "year": 2021,
+      "question_count": 4
+    },
+    {
+      "file": "2021_mtp.json",
+      "report_file": "mtp-2021-0914.pdf",
+      "report_title": "Full-Spectrum Cobalt Strike Detection",
+      "year": 2021,
+      "question_count": 4
+    },
+    {
+      "file": "2021_ncc_cloud_abuse.json",
+      "report_file": "research.nccgroup.com-Abusing_cloud_services_to_fly_under_the_radar.pdf",
+      "report_title": "Abusing cloud services to fly under the radar",
+      "year": 2021,
+      "question_count": 4
+    },
+    {
+      "file": "2021_trend_micro_cobalt_strike.json",
+      "report_file": "Tracking_Cobalt_Strike__A_Trend_Micro_Vision_One_Investigation.pdf",
+      "report_title": "Tracking Cobalt Strike: A Trend Micro Vision One Investigation",
+      "year": 2021,
+      "question_count": 4
+    },
+    {
+      "file": "2022_cobalt_strike_memory_analysis.json",
+      "report_file": "Blowing_Cobalt_Strike_Out_of_the_Water_With_Memory_Analysis.pdf",
+      "report_title": "Blowing Cobalt Strike Out of the Water With Memory Analysis",
+      "year": 2022,
+      "question_count": 4
+    },
+    {
+      "file": "2023_gootloader.json",
+      "report_file": "THREAT_ALERT_GootLoader_-_Large_payload_leading_to_compromise__BLOG_.pdf",
+      "report_title": "THREAT ALERT: GootLoader - SEO Poisoning and Large Payloads Leading to Compromise",
+      "year": 2023,
+      "question_count": 4
+    },
+    {
+      "file": "2023_hydrochasma.json",
+      "report_file": "Symantec_Hydrochasma-UnknownGroup-Targets-Medical-Shipping-Asia(02-22-2023).pdf",
+      "report_title": "Hydrochasma: Previously Unknown Group Targets Medical and Shipping Organizations in Asia",
+      "year": 2023,
+      "question_count": 4
+    },
+    {
+      "file": "2023_ioc_reference.json",
+      "report_file": "IoC_Reference_.pdf",
+      "report_title": "SNOWYAMBER, HALFRIG, QUARTERRIG - IoC Reference",
+      "year": 2023,
+      "question_count": 4
+    },
+    {
+      "file": "2025_black_basta_chat_logs.json",
+      "report_file": "A_Deep_Dive_into_the_Leaked_Black_Basta_Chat_Logs.pdf",
+      "report_title": "A Deep Dive into the Leaked Black Basta Chat Logs",
+      "year": 2025,
+      "question_count": 4
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What is the heartbeat interval used by Module 3 to send network packages to the C2 server?",
+      "expected_answer": {
+        "points": [
+          "The heartbeat package is sent every 60 seconds",
+          "The heartbeat uses Cookie fields to transmit encrypted data",
+          "Data includes: check code, process ID, system version, IP address, computer name, account, and whether it is 64-bit process"
+        ],
+        "source_section": "Section 2.7 Analysis on module 3, page 6-7"
+      },
+      "difficulty": "easy",
+      "source_report": "ANALYSIS-ON-APT-TO-BE-ATTACK-THAT-FOCUSING-ON-CHINAS-GOVERNMENT-AGENCY-.pdf",
+      "source_year": 2015
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "Why did Antiy CERT classify this attack as an APT incident despite it being based on a commercial automated platform?",
+      "expected_answer": {
+        "points": [
+          "It is a targeted attack against specific Chinese government agencies (one of the features of APT)",
+          "It has anti-detection functions and can conceal itself effectively",
+          "The attack capability is close to APT-level even though it relies on automated platform rather than custom coding",
+          "It demonstrates characteristics like running in memory, no hard disk writing, multi-beacon communication, and difficulty in forensic analysis"
+        ],
+        "source_section": "Section 1 Background and Section 4 Conclusion, pages 1 and 11-12"
+      },
+      "difficulty": "medium",
+      "source_report": "ANALYSIS-ON-APT-TO-BE-ATTACK-THAT-FOCUSING-ON-CHINAS-GOVERNMENT-AGENCY-.pdf",
+      "source_year": 2015
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What command execution techniques does APT-TOCS use to deploy its malicious shellcode?",
+      "expected_answer": {
+        "points": [
+          "Uses powershell.exe to execute Shellcode scripts",
+          "Downloads encrypted data into memory for operation using PowerShell",
+          "Decrypts data using base64 decoding and Gzip decompression",
+          "Creates suspended process rundll32.exe to inject Module 3",
+          "Uses WinExec function to call powershell.exe for downloading leading data",
+          "Operates entirely in memory with no hard disk writing operations"
+        ],
+        "source_section": "Section 2.1 Leading files and sample downloading, Section 2.2 Key mechanism, Section 2.3-2.6, pages 1-5"
+      },
+      "difficulty": "medium",
+      "source_report": "ANALYSIS-ON-APT-TO-BE-ATTACK-THAT-FOCUSING-ON-CHINAS-GOVERNMENT-AGENCY-.pdf",
+      "source_year": 2015
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What evidence links the APT-TOCS attack to the Cobalt Strike penetration testing platform?",
+      "expected_answer": {
+        "points": [
+          "Module 1 contains 'Beacon' strings and comparison shows it is identical to payload generated by Cobalt Strike Beacon (except for header data, request file name, and IP address)",
+          "Module 2's disassembling commands are exactly the same as Cobalt Strike files, including XOR encryption (x86/shikata_ga_nai), DLL downloading, and function calling modes",
+          "Module 3 data package comparison shows identical GET request patterns using Cookie fields for encrypted transmission with 60-second heartbeat interval",
+          "The entire attack chain matches Cobalt Strike's Beacon mode communication pattern"
+        ],
+        "source_section": "Section 3 The authentication analysis on the technology sources of this attack, pages 7-11"
+      },
+      "difficulty": "hard",
+      "source_report": "ANALYSIS-ON-APT-TO-BE-ATTACK-THAT-FOCUSING-ON-CHINAS-GOVERNMENT-AGENCY-.pdf",
+      "source_year": 2015
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What vulnerability (CVE) was exploited in the malicious email sent on April 26, 2017 from the Ministry of Foreign Affairs in the Turkish Republic of Northern Cyprus?",
+      "expected_answer": {
+        "points": [
+          "CVE-2017-0199",
+          "The document was named 'IRAN_NORTH-KOREA_Russia 20170420.docx'",
+          "It downloaded an rtf file from update.microsoft-office[.]solutions/license.doc",
+          "The exploit loaded a VBA script from http://38.130.75[.]20/check.html"
+        ],
+        "source_section": "Malicious Documents - Exploiting CVE-2017-0199, pages 7-8"
+      },
+      "difficulty": "easy",
+      "source_report": "Operation_Wilted_Tulip_(1).pdf",
+      "source_year": 2017
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "What is the likely motivation and objective of the CopyKittens threat group based on their targeting and data collection behavior?",
+      "expected_answer": {
+        "points": [
+          "Primary focus appears to be foreign espionage on strategic targets",
+          "Objective is to gather as much information as possible from target organizations",
+          "They indiscriminately exfiltrate large amounts of documents, spreadsheets, personal data, configuration files and databases",
+          "Target government institutions, academic institutions, defense companies, and sub-contractors of Ministry of Defense",
+          "Main targets are in Israel, Saudi Arabia, Turkey, United States, Jordan, and Germany"
+        ],
+        "source_section": "Introduction - Targeting section, pages 3-4"
+      },
+      "difficulty": "medium",
+      "source_report": "Operation_Wilted_Tulip_(1).pdf",
+      "source_year": 2017
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What are the key malware tools and frameworks used by CopyKittens in their operations?",
+      "expected_answer": {
+        "points": [
+          "Self-developed: TDTESS backdoor, Vminst (lateral movement tool), NetSrv (Cobalt Strike loader), ZPP (file compression tool), Matryoshka v1 and v2 RATs",
+          "Public tools: Cobalt Strike (trial version), Metasploit, Mimikatz, Empire post-exploitation framework",
+          "Web exploitation tools: Havij, Acunetix, sqlmap",
+          "Notable characteristic: use of DNS for command and control communication and data exfiltration",
+          "Tools available in both Cobalt Strike and Matryoshka"
+        ],
+        "source_section": "Introduction - Malware section, page 3 and Malware chapter, pages 27-38"
+      },
+      "difficulty": "medium",
+      "source_report": "Operation_Wilted_Tulip_(1).pdf",
+      "source_year": 2017
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What evidence suggests a potential connection between CopyKittens and the Oilrig threat group?",
+      "expected_answer": {
+        "points": [
+          "A digital certificate stolen from AI Squared company was used by CopyKittens",
+          "This same digital certificate was previously used by the Oilrig threat group",
+          "The certificate was used to sign the file p.exe in a malicious document campaign",
+          "This might indicate the two groups share resources or collaborate in their activity"
+        ],
+        "source_section": "Delivery and Infection - Embedded OLE Objects section, page 12"
+      },
+      "difficulty": "hard",
+      "source_report": "Operation_Wilted_Tulip_(1).pdf",
+      "source_year": 2017
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What vulnerability was exploited in the malicious email sent from the Ministry of Foreign Affairs in the Turkish Republic of Northern Cyprus in April 2017?",
+      "expected_answer": {
+        "points": [
+          "CVE-2017-0199 was exploited",
+          "The malicious document was named 'IRAN_NORTH-KOREA_Russia 20170420.docx'",
+          "It downloaded an rtf file from update.microsoft-office[.]solutions/license.doc",
+          "The exploit loaded VBA script from http://38.130.75[.]20/check.html"
+        ],
+        "source_section": "Delivery and Infection > Malicious Documents > Exploiting CVE-2017-0199, pages 7-8"
+      },
+      "difficulty": "easy",
+      "source_report": "Clearsky_Operation_Wilted_Tulip(07-25-2017).pdf",
+      "source_year": 2017
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "What evidence suggests a possible connection between the CopyKittens threat group and the OilRig threat group?",
+      "expected_answer": {
+        "points": [
+          "A self-extracting executable (p.exe) was digitally signed with a stolen certificate from AI Squared company",
+          "This same digital certificate was previously used by the OilRig threat group",
+          "The shared use of the stolen certificate indicates the two groups may share resources or collaborate in their activities",
+          "This was observed in a malicious document titled 'ssl.docx' delivered in February 2017"
+        ],
+        "source_section": "Delivery and Infection > Malicious Documents > Embedded OLE Objects, pages 11-12"
+      },
+      "difficulty": "medium",
+      "source_report": "Clearsky_Operation_Wilted_Tulip(07-25-2017).pdf",
+      "source_year": 2017
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What self-developed malware and tools does CopyKittens use that had not been publicly reported prior to this analysis?",
+      "expected_answer": {
+        "points": [
+          "TDTESS backdoor - provides reverse shell with download and execute capabilities",
+          "Vminst - a lateral movement tool for infecting hosts in the network",
+          "NetSrv - a Cobalt Strike loader",
+          "ZPP - a file compression console program",
+          "Matryoshka v2 - a new version of their RAT with similar functionality to v1"
+        ],
+        "source_section": "Introduction > Malware, page 3 and Malware chapter, pages 27-35"
+      },
+      "difficulty": "medium",
+      "source_report": "Clearsky_Operation_Wilted_Tulip(07-25-2017).pdf",
+      "source_year": 2017
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What countries and types of organizations are primarily targeted by the CopyKittens threat group?",
+      "expected_answer": {
+        "points": [
+          "Main target countries: Israel, Saudi Arabia, Turkey, United States, Jordan, and Germany",
+          "Occasionally targets individuals in other countries and UN employees",
+          "Targeted organizations include: government institutions (such as Ministry of Foreign Affairs), academic institutions, defense companies, municipal authorities, sub-contractors of the Ministry of Defense, and large IT companies",
+          "Online news outlets and general websites were breached and weaponized for watering hole attacks",
+          "Israeli embassies were targeted, as well as foreign embassies in Israel"
+        ],
+        "source_section": "Introduction > Targeting, page 3 and Targeting chapter, page 4"
+      },
+      "difficulty": "easy",
+      "source_report": "Clearsky_Operation_Wilted_Tulip(07-25-2017).pdf",
+      "source_year": 2017
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What is the heartbeat interval used by the APT-TOCS malware to send network packages?",
+      "expected_answer": {
+        "points": [
+          "The malware sends a network heartbeat package every 60 seconds",
+          "Data information is sent via the Cookie field",
+          "This feature is designed to evade detection of security software and firewall interception"
+        ],
+        "source_section": "Background section, page 2"
+      },
+      "difficulty": "easy",
+      "source_report": "antiy.net-ANALYSIS_ON_APT-TO-BE_ATTACK_THAT_FOCUSING_ON_CHINAS_GOVERNMENT_AGENCY.pdf",
+      "source_year": 2018
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "Why does Antiy classify this attack as 'APT-to-be' rather than a traditional APT attack?",
+      "expected_answer": {
+        "points": [
+          "The attack capability is close to APT-level but relies on an automatic attack testing platform (Cobalt Strike) instead of the attack team's abilities",
+          "Attackers saved costs by using a commercial attack platform rather than developing custom malware",
+          "The attack doesn't cost much and attackers aren't responsible for coding",
+          "Nations and organizations without elite hacker groups can launch APT-like attacks using this pattern",
+          "It demonstrates the democratization of advanced attack capabilities through commercial tools"
+        ],
+        "source_section": "Background section page 3, and Conclusion section page 13"
+      },
+      "difficulty": "medium",
+      "source_report": "antiy.net-ANALYSIS_ON_APT-TO-BE_ATTACK_THAT_FOCUSING_ON_CHINAS_GOVERNMENT_AGENCY.pdf",
+      "source_year": 2018
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What are the key technical characteristics of the APT-TOCS attack chain and execution method?",
+      "expected_answer": {
+        "points": [
+          "Uses powershell.exe to execute Shellcode scripts for remote control",
+          "Runs entirely in memory with no hard disk writing operations",
+          "Downloads encrypted data into memory using PowerShell",
+          "Decrypted data is executable Shellcode generated by Cobalt Strike",
+          "Uses Beacon mode for communication",
+          "Encrypts IP addresses, domains, and URLs using XOR 0x69",
+          "Transmits heartbeat package data using RSA and BASE64 encryption via Cookie fields",
+          "Module 2 establishes process rundll32.exe to inject Module 3 (backdoor Shellcode)"
+        ],
+        "source_section": "Section 2.2 Key mechanism, Section 2.7 Analysis on module 3, pages 4-9"
+      },
+      "difficulty": "hard",
+      "source_report": "antiy.net-ANALYSIS_ON_APT-TO-BE_ATTACK_THAT_FOCUSING_ON_CHINAS_GOVERNMENT_AGENCY.pdf",
+      "source_year": 2018
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "How did Antiy CERT authenticate that the attack was based on Cobalt Strike, and what evidence supports this attribution?",
+      "expected_answer": {
+        "points": [
+          "Found 'Beacon' strings when analyzing Module 1",
+          "Module 1 comparison: only differed in Head data, request file name, and IP address when compared to Beacon-generated payload",
+          "Module 2 comparison: disassembling commands were exactly the same as Beacon files, including XOR encryption, DLL downloading, function address obtaining, and calling modes",
+          "Module 3 data package comparison: both use Cookie to transmit encrypted information and send requests every 60 seconds",
+          "The Shellcode for communication is conducted using Beacon mode generated by Cobalt Strike platform"
+        ],
+        "source_section": "Section 3 - The authentication analysis on the technology sources of this attack, pages 9-12"
+      },
+      "difficulty": "medium",
+      "source_report": "antiy.net-ANALYSIS_ON_APT-TO-BE_ATTACK_THAT_FOCUSING_ON_CHINAS_GOVERNMENT_AGENCY.pdf",
+      "source_year": 2018
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What malware did Chimera use to implant a skeleton key into domain controller servers?",
+      "expected_answer": {
+        "points": [
+          "SkeletonKeyInjector malware",
+          "Contained code extracted from both Dumpert and Mimikatz",
+          "Made direct syscalls to bypass security products based on API hooking",
+          "Discovered in both Case A and Case B"
+        ],
+        "source_section": "Introduction, page 2-3"
+      },
+      "difficulty": "easy",
+      "source_report": "[TLP-White]20200415_Chimera_V4.1.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "What was the likely motivation behind Chimera APT Group's attacks on Taiwan semiconductor vendors?",
+      "expected_answer": {
+        "points": [
+          "Stealing intelligence, specifically documents about IC chips, SDKs, IC designs, and source code",
+          "Motive likely stems from competitors or countries seeking competitive advantage over rivals",
+          "Based on stolen file names including chip documents, SDKs, and source code, the goal was to acquire semiconductor proprietary data",
+          "May be related to business competition or a country's industrial strategy"
+        ],
+        "source_section": "Introduction page 1-2, Leaked File Name section page 9, Conclusion page 22"
+      },
+      "difficulty": "medium",
+      "source_report": "[TLP-White]20200415_Chimera_V4.1.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What techniques did Chimera use to avoid detection when establishing C2 communications?",
+      "expected_answer": {
+        "points": [
+          "Used Cobalt Strike as main RAT that replaced and masqueraded as Google Update",
+          "Located C2 servers in Google Cloud Platform to make attribution difficult",
+          "Used legal cloud services like Appspot.com and azureedge.net as C2 infrastructure",
+          "Employed fileless attacks by injecting payloads directly into system memory using PowerShell scripts"
+        ],
+        "source_section": "Introduction page 2, Case B page 7-9, MITRE ATT&CK section page 21"
+      },
+      "difficulty": "medium",
+      "source_report": "[TLP-White]20200415_Chimera_V4.1.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What evidence links the attacks in Case A and Case B to the same threat actor?",
+      "expected_answer": {
+        "points": [
+          "Both cases used identical SkeletonKeyInjector malware (wlanapi.dll in Case A, d3dll.dll in Case B)",
+          "Same modified RAR program (RecordedTV.ms/jucheck.exe) with one-byte discrepancy from original version found in both cases",
+          "Both used Cobalt Strike backdoor masquerading as GoogleUpdate.exe",
+          "Similar attack techniques and tactics including use of schtasks for lateral movement, credential dumping from domain controllers",
+          "Both targeted semiconductor vendors in Hsinchu Science-based Industrial Park in Taiwan during 2018-2019 timeframe"
+        ],
+        "source_section": "Storyline of the Operation pages 2-9, Malware Reversing pages 13-18"
+      },
+      "difficulty": "hard",
+      "source_report": "[TLP-White]20200415_Chimera_V4.1.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What tool did CLOP ransomware attackers use for remote command and control of compromised systems?",
+      "expected_answer": {
+        "points": [
+          "Cobalt Strike - a penetration testing emulation program",
+          "Used Beacon agent (client-side component) installed on victim systems",
+          "Attackers likely used a cracked version of Cobalt Strike",
+          "Multiple C&C server IPs identified including 91.214.124.25, 89.144.25.172, etc."
+        ],
+        "source_section": "Section: Remote Control Malware Installation (Cobalt Strike Beacon), pages 19-23"
+      },
+      "difficulty": "easy",
+      "source_report": "Analysis_ReportCLOP_Ransomware.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "How did attackers progress from initial compromise to domain-wide ransomware deployment in Active Directory environments?",
+      "expected_answer": {
+        "points": [
+          "Phase 1 (Preparation): Spearphishing emails with malicious documents to install remote access tools",
+          "Phase 2 (Takeover): Used Cobalt Strike to gather AD information, escalate privileges via exploits, steal credentials using Mimikatz",
+          "Phase 3 (Execution): After obtaining Domain Admin credentials, accessed Domain Controller and deployed CLOP ransomware via GPO/scheduled tasks to all domain-joined systems",
+          "Targeted specifically AD environments, checking for WORKGROUP membership to identify corporate networks"
+        ],
+        "source_section": "Section: Corporate Attack Process, pages 9-31, particularly Table 2 on page 11"
+      },
+      "difficulty": "medium",
+      "source_report": "Analysis_ReportCLOP_Ransomware.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What are the key technical characteristics and IOCs of the CLOP ransomware variant used in the E-Land Group attack?",
+      "expected_answer": {
+        "points": [
+          "File hashes: MD5 8b6c413e2539823ef8f8b85900d19724, 8fc09cb1540a6dea87a078b92c8f2b0a",
+          "Compiled on November 21-22, 2020",
+          "Uses RC4 symmetric encryption with RSA public key to encrypt the symmetric key",
+          "Creates .Cllp files containing encrypted keys (different from earlier versions that appended to files)",
+          "Does NOT delete Volume Shadow Copies (allowing potential Windows restore)",
+          "Digital signature: Insta Software Solution Inc. (valid certificate)",
+          "Runs as Windows service, not regular process"
+        ],
+        "source_section": "Section: E-Land Group Attack CLOP Ransomware Analysis, pages 5-8, and Table 1 page 7"
+      },
+      "difficulty": "medium",
+      "source_report": "Analysis_ReportCLOP_Ransomware.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What evidence links the CLOP ransomware attacks to a single organized threat actor group, and what is their targeting strategy?",
+      "expected_answer": {
+        "points": [
+          "Same digital certificates used across multiple malware types (CLOP ransomware, Windows Defender Killer, Process Killer) from October-November 2020",
+          "Consistent attack infrastructure: Same Cobalt Strike C&C servers used across campaigns",
+          "Targeting pattern: Exclusively targets non-Russian countries (checks keyboard layout and character set to avoid CIS countries)",
+          "Victim profile: 369 companies, 13,497 systems in 2019; focused on enterprises using Active Directory",
+          "Industry agnostic: Attacked public sector, education, broadcasting, finance, manufacturing, IT, retail, telecom",
+          "Double extortion model: Started threatening data leaks on darkweb site (ekbgzchl6x2ias37.onion) from October 2020"
+        ],
+        "source_section": "Section: Attack Targets pages 9-10, and Section: Files with Same Certificate page 7-8"
+      },
+      "difficulty": "hard",
+      "source_report": "Analysis_ReportCLOP_Ransomware.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What percentage of ransom payouts do REvil affiliates receive based on their performance?",
+      "expected_answer": {
+        "points": [
+          "Affiliates receive between 60% and 75% of payouts",
+          "The percentage depends on affiliate performance",
+          "REvil operates as a Ransomware-as-a-Service (RaaS) model with vetted affiliates who buy in"
+        ],
+        "source_section": "REvil Ransomware as a Service, page 8"
+      },
+      "difficulty": "easy",
+      "source_report": "eu-20-Clarke-Its-Not-FINished-The-Evolving-Maturity-In-Ransomware-Operations.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "How does the partnership model between QAKBOT operators and DOPPELPAYMER ransomware developers work, and what are the responsibilities of each party?",
+      "expected_answer": {
+        "points": [
+          "QAKBOT operators provide initial access to compromised environments with QAKBOT already deployed",
+          "Ransomware developers (DOPPELPAYMER) are given access to the compromised environment",
+          "Ransomware developers handle payment negotiations themselves",
+          "This represents an evolution from QAKBOT's original purpose as a banking trojan to a partnership-based ransomware delivery model in 2020"
+        ],
+        "source_section": "Partnership Model, pages 28-29"
+      },
+      "difficulty": "medium",
+      "source_report": "eu-20-Clarke-Its-Not-FINished-The-Evolving-Maturity-In-Ransomware-Operations.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What are the four stages DOPPELPAYMER ransomware executes from initial delivery to file encryption?",
+      "expected_answer": {
+        "points": [
+          "Stage 1: Enumerates all local users and changes passwords using a preconfigured string and MD5 hash of the computer name",
+          "Stage 2: Registers itself as a service by copying a legitimate service and replacing it with the ransomware binary",
+          "Stage 3: Modifies Boot Configuration Database (disables recovery, enables safeboot minimal mode, configures Group Policy to display ransom message)",
+          "Stage 4: Reboots the system and begins encrypting files with .doppeled extension"
+        ],
+        "source_section": "DOPPELPAYMER stages, pages 36-39"
+      },
+      "difficulty": "hard",
+      "source_report": "eu-20-Clarke-Its-Not-FINished-The-Evolving-Maturity-In-Ransomware-Operations.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What are the key differences between traditional APT intrusions and ransomware operations as described in the report?",
+      "expected_answer": {
+        "points": [
+          "Both involve domain admin access, multiple persistence mechanisms, and data theft",
+          "Ransomware operations add two critical impacts: all IT infrastructure is taken down and business cannot function",
+          "Ransomware operations use similar tools to APT/FIN intrusions and Red Team engagements",
+          "Time to deployment varies from up to 3-4 months for comprehensive domain-wide ransomware deployment"
+        ],
+        "source_section": "APT vs APT Ransomware comparison, pages 5-6"
+      },
+      "difficulty": "medium",
+      "source_report": "eu-20-Clarke-Its-Not-FINished-The-Evolving-Maturity-In-Ransomware-Operations.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What malicious domain did NilePhish use to distribute FinSpy through a fake Adobe Flash Player update?",
+      "expected_answer": {
+        "points": [
+          "Domain: flash.browserupdate[.]download",
+          "The website pretended to be an Adobe Flash Player update warning",
+          "Clicking anywhere on the page downloaded Flash Player backdoored with FinSpy",
+          "Discovered in September 2019 by Amnesty's Security Lab"
+        ],
+        "source_section": "NilePhish Fake Flash Player Update deliver FinFisher's FinSpy, page 1-2"
+      },
+      "difficulty": "easy",
+      "source_report": "German-made_FinSpy_spyware_found_in_Egypt,_and_Mac_and_Linux_versions_revealed___Amnesty_International.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "How did Amnesty International establish the attribution link between the FinSpy distribution infrastructure and the NilePhish attacker group?",
+      "expected_answer": {
+        "points": [
+          "PDB debug path revealed username 'shenno' in developer's computer path: C:\\Users\\shenno\\source\\repos\\clean.downloader",
+          "The 'shenno' username was previously observed in NilePhish campaigns documented in March 2019",
+          "Use of same hosting provider: Offshore Servers (a small Russian hosting company)",
+          "Registration of additional NilePhish domains with same registrar in September 2019 (loglive.co, webmaillive.co, onlineaccount.live)",
+          "CheckPoint independently confirmed the link between NilePhish, Offshore Servers infrastructure, and the 'shenno' username in October 2019"
+        ],
+        "source_section": "Connections with NilePhish, page 3"
+      },
+      "difficulty": "medium",
+      "source_report": "German-made_FinSpy_spyware_found_in_Egypt,_and_Mac_and_Linux_versions_revealed___Amnesty_International.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What surveillance capabilities are included in the FinSpy for Mac OS modular framework?",
+      "expected_answer": {
+        "points": [
+          "Module 02 (FSMain): List files",
+          "Module 04 (CL): Execute shell commands",
+          "Module 10 (A): Audio recording",
+          "Module 12 (IO): Keylogger",
+          "Module 16 (FSCF): Recording of modified files using File System Events API",
+          "Module 17 (FSAF): Recording of accessed files",
+          "Module 19 (FSDF): Recording of deleted files",
+          "Module 22 (MCMain): Keylogger for virtual keyboards",
+          "Module 23 (CW, LSC, RSC): Camera recording",
+          "Module 24 (SM): Screen recording",
+          "Module 27 (E): Email stealer - installs malicious add-on to Apple Mail and Thunderbird",
+          "Module 28 (W): Collect information about Wi-Fi networks",
+          "Module 29 (RM): List files on remote devices",
+          "Module 7f: Handles cryptography for C&C communications"
+        ],
+        "source_section": "A modular framework, page 7-8"
+      },
+      "difficulty": "medium",
+      "source_report": "German-made_FinSpy_spyware_found_in_Egypt,_and_Mac_and_Linux_versions_revealed___Amnesty_International.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What Command and Control (C&C) infrastructure proxy servers were shared across FinSpy variants discovered in this investigation?",
+      "expected_answer": {
+        "points": [
+          "Two proxy IP addresses appeared in multiple FinSpy samples: 185.25.50.[REDACTED] and 103.11.67.[REDACTED]",
+          "These proxies were found in FinSpy for Mac OS configuration (TlvTypeConfigTargetProxy)",
+          "Same proxies found in FinSpy for Linux configuration",
+          "Same proxies found in FinSpy for Android configuration",
+          "All variants used port 443 for C&C communications",
+          "This indicates the samples from server 158.69.105[.]207 were likely operated by the same entity"
+        ],
+        "source_section": "Configuration sections for Mac OS (page 10), Linux (page 16), and Android (page 17)"
+      },
+      "difficulty": "hard",
+      "source_report": "German-made_FinSpy_spyware_found_in_Egypt,_and_Mac_and_Linux_versions_revealed___Amnesty_International.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What URL was used to download the remote template in this attack?",
+      "expected_answer": {
+        "points": [
+          "URL: https://yenile[.]asia/YOOMANHOWYOUDARE/indexb.dotm",
+          "The domain yenile[.]asia was registered on February 29, 2020 from Hong Kong",
+          "Document creation time was 15 days after domain registration"
+        ],
+        "source_section": "Lure with delayed code execution, page 2"
+      },
+      "difficulty": "easy",
+      "source_report": "Multi-stage_APT_attack_drops_Cobalt_Strike_using_Malleable_C2_feature_-_Malwarebytes_Labs___Malwarebytes_Labs.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "What evasion techniques did this APT group employ to avoid detection by security products?",
+      "expected_answer": {
+        "points": [
+          "Intentional delay in payload execution - waiting until victim reboots machine instead of immediate compromise",
+          "Hiding shellcode within innocuous JavaScript (jQuery library)",
+          "Loading payload without touching disk (fileless execution)",
+          "Using Cobalt Strike's Malleable C2 feature to blend C2 traffic with legitimate traffic",
+          "Geofencing by excluding Russia (RU) and United States (US) from execution"
+        ],
+        "source_section": "Introduction (page 1) and Intermediary loader (pages 5-6)"
+      },
+      "difficulty": "medium",
+      "source_report": "Multi-stage_APT_attack_drops_Cobalt_Strike_using_Malleable_C2_feature_-_Malwarebytes_Labs___Malwarebytes_Labs.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What files were dropped by the malicious Word macro and what were their purposes?",
+      "expected_answer": {
+        "points": [
+          "Ecmd.exe: Base64 decoded .Net loader stored in C:\\ProgramData (from UserForm1 or UserForm2 depending on .Net version)",
+          "cf.ini: AES encrypted file extracted from UserForm3, later decrypted by ecmd.exe",
+          "ecmd.exe.lnk: Shortcut file for persistence, dropped in Startup directory from UserForm4",
+          "Payload not executed until machine reboots for delayed execution"
+        ],
+        "source_section": "Lure with delayed code execution, page 3, Figure 4"
+      },
+      "difficulty": "medium",
+      "source_report": "Multi-stage_APT_attack_drops_Cobalt_Strike_using_Malleable_C2_feature_-_Malwarebytes_Labs___Malwarebytes_Labs.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE/CONTEXTUAL",
+      "question": "What evidence suggests possible attribution to Chinese APT groups, and which specific groups used similar techniques?",
+      "expected_answer": {
+        "points": [
+          "Chinese APT groups Mustang Panda and APT41 are known to use jQuery and Malleable C2 feature of Cobalt Strike",
+          "Mustang Panda's latest campaign used the same Cobalt Strike feature with the same jQuery profile to download Cobalt Strike payload",
+          "The attack is similar to Mustang Panda campaign, but initial infection vector and first payload differ",
+          "Domain hosting remote template registered in Hong Kong",
+          "Attackers excluded Russia and US (latter may be to avoid US malware analysts' attention)"
+        ],
+        "source_section": "Attribution section, pages 10-12"
+      },
+      "difficulty": "hard",
+      "source_report": "Multi-stage_APT_attack_drops_Cobalt_Strike_using_Malleable_C2_feature_-_Malwarebytes_Labs___Malwarebytes_Labs.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What file extension does Ryuk ransomware append to encrypted files?",
+      "expected_answer": {
+        "points": [
+          "Files are encrypted with .RYK extension",
+          "Ransom notes are named 'RyukReadMe.txt' or 'RyukReadMe.html'",
+          "Custom Expert Rules monitor creation of *.ryk files"
+        ],
+        "source_section": "Endpoint Security 10.x - Custom Expert Rules, page 3"
+      },
+      "difficulty": "easy",
+      "source_report": "McAfee_Labs_Threat_Advisory_-_Ransom-Ryukv6.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "How does Ryuk ransomware's distribution method differ from traditional ransomware campaigns, and what does this imply about the threat actors' capabilities?",
+      "expected_answer": {
+        "points": [
+          "Traditional ransomware spreads via Exploit Kits and malicious email campaigns",
+          "Ryuk is distributed via targeted attacks - attackers already have network access from prior hacking/infection attempts",
+          "Uses techniques like brute forcing RDP connections and malicious use of Cobalt Strike",
+          "Deployed to business-critical systems to cause maximum disruption and warrant considerable ransom",
+          "This implies sophisticated threat actors with reconnaissance and lateral movement capabilities"
+        ],
+        "source_section": "Summary and Infection and Propagation Vectors, pages 1-2"
+      },
+      "difficulty": "medium",
+      "source_report": "McAfee_Labs_Threat_Advisory_-_Ransom-Ryukv6.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What MITRE ATT&CK techniques are associated with Ryuk ransomware according to the report?",
+      "expected_answer": {
+        "points": [
+          "TA 0002 Execution: T1059 - Command and Scripting Interpreter",
+          "TA 0003 Persistence: T1547 - Boot or Logon AutoStart Execution",
+          "TA 0004 Privilege Escalation: T1547 - Boot or Logon AutoStart Execution, T1055 - Process Injection",
+          "TA 0005 Defence Evasion: T1562 - Impair Defences, T1055 - Process Injection",
+          "TA 0007 Discovery: T1083 - File and Directory Discovery, T1016 - System Network Configuration Discovery",
+          "TA 0040 Impact: T1489 - Service Stop"
+        ],
+        "source_section": "McAfee EDR section, page 2"
+      },
+      "difficulty": "medium",
+      "source_report": "McAfee_Labs_Threat_Advisory_-_Ransom-Ryukv6.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE/CONTEXTUAL",
+      "question": "What evidence links Ryuk activity to Cobalt Strike usage, and what named pipes are associated with this tool?",
+      "expected_answer": {
+        "points": [
+          "Ryuk is suspected to be distributed via malicious use of Cobalt Strike",
+          "Custom Expert Rules block creation of pipes associated with Cobalt Strike",
+          "Named pipe patterns: **pipe\\MSSE* (Rule 3)",
+          "Named pipe patterns: **pipe\\status_* (Rule 4)",
+          "Multiple Cobalt Strike-related detection signatures observed: Cobalt-EVTS, CobaltStr-FDWE, Cobalt/Shell, CobaltStrike, CobaltStr, Trojan-Cobalt",
+          "These detections in environment may indicate attempted compromise by Ryuk group"
+        ],
+        "source_section": "Infection and Propagation Vectors (page 2), Custom Expert Rules (page 4), Indicators of compromise (page 13)"
+      },
+      "difficulty": "hard",
+      "source_report": "McAfee_Labs_Threat_Advisory_-_Ransom-Ryukv6.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What is the default named pipe structure used by Cobalt Strike staged payloads?",
+      "expected_answer": {
+        "points": [
+          "Default named pipe structure: \\\\.\\pipe\\MSSE-####-server",
+          "The four-digit number is randomly generated",
+          "Example: \\\\.\\pipe\\MSSE-6722-server"
+        ],
+        "source_section": "Staged/Stageless Executable Generator - Staged section, page 9"
+      },
+      "difficulty": "easy",
+      "source_report": "Talos_Cobalt_Strike.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "How does Cobalt Strike's beacon communicate with the C2 server and what encryption methods are used for different operations?",
+      "expected_answer": {
+        "points": [
+          "Heartbeat: Uses HTTP cookies with RSA PKCS1 padding encrypted metadata",
+          "Tasks: Uses AES-256 in CBC mode with HMAC-SHA-256 encryption",
+          "Callbacks: HTTP POST with encrypted payload (first 4 bytes contain payload size)",
+          "AES key is calculated using first 16 bytes of decrypted metadata",
+          "Beacon configuration is XOR encrypted with static default keys per version"
+        ],
+        "source_section": "C2 Communication section, pages 10-12"
+      },
+      "difficulty": "medium",
+      "source_report": "Talos_Cobalt_Strike.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What Java vulnerabilities (CVEs) are exploited by the Smart Java Applet Attack module and which Java versions are affected?",
+      "expected_answer": {
+        "points": [
+          "CVE-2011-3544: Rhino script engine RCE (Java \u2264 1.6.0_27 or Java == 7.0)",
+          "CVE-2013-2465: 2D ImagingLib RCE (Java \u2264 1.6.0_45)",
+          "CVE-2012-4681: SunToolkit RCE (Java \u2264 1.7.0_6)",
+          "CVE-2013-2460: ProviderSkeleton invoke() RCE (Java \u2264 1.7.0_21)",
+          "Exploits work against Java 1.7u21 and older, Java 1.6u45 and older"
+        ],
+        "source_section": "Target Module: Smart Java Applet Attack, pages 18-23"
+      },
+      "difficulty": "hard",
+      "source_report": "Talos_Cobalt_Strike.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE/CONTEXTUAL",
+      "question": "What are the key differences between staged and stageless Cobalt Strike beacon payloads in terms of size, delivery, and execution?",
+      "expected_answer": {
+        "points": [
+          "Staged: Small initial payload that retrieves larger beacon.dll from C2, used to evade AV detection with smaller footprint",
+          "Stageless: Delivered all at once (>200KB), contains full malicious functionality without additional C2 retrieval",
+          "Both use named pipes and XOR decryption (default key 0xE3F4C314)",
+          "Both use Reflective DLL loading to load beacon into memory",
+          "Staged allows embedding in exploits with resource limitations (e.g., command line character limits)"
+        ],
+        "source_section": "Target Module: Staged/Stageless Executable Generator, pages 8-10"
+      },
+      "difficulty": "medium",
+      "source_report": "Talos_Cobalt_Strike.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What default XOR key does Cobalt Strike use to encrypt beacon configurations in version 4?",
+      "expected_answer": {
+        "points": [
+          "Default XOR key: 0xE3F4C314 for staged payloads",
+          "Default XOR key: 0x23 (35) for PowerShell HTA payloads",
+          "The XOR key is static for each respective beacon version (3 or 4)",
+          "Configuration is marked in the executable by patterns that allow parsing directly from unpacked beacon DLL"
+        ],
+        "source_section": "Staged/Stageless Executables - Beacon Configuration, page 9-10"
+      },
+      "difficulty": "medium",
+      "source_report": "2020.09.11_Talos_-_The_art_and_science_of_detecting_Cobalt_Strike.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "How does Cobalt Strike's staged payload bypass AV detection and what are the advantages over stageless payloads?",
+      "expected_answer": {
+        "points": [
+          "Staged payloads are small, leaving less of a footprint and appearing more benign",
+          "Initial payload has less functionality, more likely to evade AV detection",
+          "Larger payload (beacon.dll) is retrieved afterward and loaded directly into memory using Reflective DLL injection",
+          "Allows embedding in exploits with resource limitations on the target",
+          "Stagers can be delivered using different techniques while retrieving the same robust payload"
+        ],
+        "source_section": "Staged vs. Stageless, page 8"
+      },
+      "difficulty": "medium",
+      "source_report": "2020.09.11_Talos_-_The_art_and_science_of_detecting_Cobalt_Strike.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What encryption methods does Cobalt Strike use for C2 communication including heartbeats, tasks, and callbacks?",
+      "expected_answer": {
+        "points": [
+          "Heartbeat data: RSA with PKCS1 padding to encrypt metadata stored in HTTP cookie",
+          "Task commands: AES-256 in CBC mode with HMAC-SHA-256",
+          "AES key calculated using the first 16 bytes of decrypted metadata",
+          "Callbacks use the same AES-256 encryption, with first 4 bytes indicating payload size",
+          "All C2 communication is encrypted to evade network detection"
+        ],
+        "source_section": "C2 Communication - Heartbeat, Tasks, Callbacks, pages 10-12"
+      },
+      "difficulty": "hard",
+      "source_report": "2020.09.11_Talos_-_The_art_and_science_of_detecting_Cobalt_Strike.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE/CONTEXTUAL",
+      "question": "What Java vulnerabilities are exploited by the Smart Java Applet Attack module and how does it select which exploit to use?",
+      "expected_answer": {
+        "points": [
+          "CVE-2011-3544 (Rhino script engine) - Java <= 1.6.0_27 or Java == 7.0",
+          "CVE-2013-2465 (2D ImagingLib) - Java <= 1.6.0_45",
+          "CVE-2012-4681 (SunToolkit) - Java <= 1.7.0_6",
+          "CVE-2013-2460 (ProviderSkeleton invoke()) - Java <= 1.7.0_21",
+          "Selection based on polling 'java.version' via System.getProperty and matching against version ranges",
+          "The module is 'smart' because it determines which exploit to use based on victim's Java version"
+        ],
+        "source_section": "Smart Java Applet Attack - CVE sections, pages 18-24"
+      },
+      "difficulty": "hard",
+      "source_report": "2020.09.11_Talos_-_The_art_and_science_of_detecting_Cobalt_Strike.pdf",
+      "source_year": 2020
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What are the three main components of Cobalt Strike's architecture?",
+      "expected_answer": {
+        "points": [
+          "Beacon: The actual malware that operates as a backdoor in the infected PC",
+          "Team Server: The C&C server that the beacon communicates with",
+          "Cobalt Strike Client: Used by attackers to connect to the team server and send commands to the beacon"
+        ],
+        "source_section": "1. Attack Flow of Cobalt Strike, page 4"
+      },
+      "difficulty": "easy",
+      "source_report": "ASEC_REPORT_vol.103_ENG.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "How does Cobalt Strike's 'malleable C&C profile' feature help attackers bypass network security systems?",
+      "expected_answer": {
+        "points": [
+          "Allows attackers to modify Cobalt Strike's C&C traffic to their liking",
+          "Traffic can be disguised as communication with normal servers such as Google or Bing",
+          "This disguise allows communication with attacker server without detection by network security systems",
+          "Uses a settings file called 'profile' to execute this feature"
+        ],
+        "source_section": "2.1. Initial Compromise and Establish Foothold, page 7"
+      },
+      "difficulty": "medium",
+      "source_report": "ASEC_REPORT_vol.103_ENG.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What lateral movement commands does Cobalt Strike provide by default for internal propagation?",
+      "expected_answer": {
+        "points": [
+          "psexec (psexec64): For remote execution",
+          "psexec_psh: PowerShell-based psexec",
+          "winrm (winrm64): Windows Remote Management",
+          "ssh (ssh-key): SSH-based propagation",
+          "Direct shell commands can also be used"
+        ],
+        "source_section": "2.4. Lateral Movement, page 8"
+      },
+      "difficulty": "medium",
+      "source_report": "ASEC_REPORT_vol.103_ENG.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What ransomware families were observed using Cobalt Strike for lateral movement in the report, and what were their initial infection vectors?",
+      "expected_answer": {
+        "points": [
+          "CLOP ransomware: Initial infection via FlawedAmmyy RAT from spam emails, used SdbBot backdoor",
+          "Conti ransomware: Distributed through IcedID banking malware from malicious Office attachments",
+          "DarkSide ransomware: Propagated via Zloader malware from spam mail attachments (Excel 4.0 Macro)",
+          "Ryuk ransomware: Distributed through BazarLoader/BazarBackdoor from phishing emails with malicious documents"
+        ],
+        "source_section": "4. Ransomware Cases Exploiting Cobalt Strike, pages 19-25"
+      },
+      "difficulty": "hard",
+      "source_report": "ASEC_REPORT_vol.103_ENG.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What naming convention does the Lockean group use for the Rclone exfiltration tool?",
+      "expected_answer": {
+        "points": [
+          "Rclone executable and configuration file renamed as 'svchost.exe' and 'svchost.conf'",
+          "The naming spoofs the Windows service 'svchost'",
+          "This naming convention was observed in Gefco, Ouest-France, Pierre Fabre, and The DFIR Report incidents"
+        ],
+        "source_section": "Section 2.3 Investigation into the use of the Rclone exfiltration tool, page 11; Section 3.3 Exfiltration, page 15"
+      },
+      "difficulty": "easy",
+      "source_report": "CERTFR-2021-CTI-009.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "Why did ANSSI name this cyber criminal group 'Lockean' and what does this reveal about their investigation methodology?",
+      "expected_answer": {
+        "points": [
+          "Named 'Lockean' based on the WebDAV username used for data exfiltration during the Egregor incident at Ouest-France",
+          "Demonstrates ANSSI's approach of using unique technical artifacts to attribute and name threat actors",
+          "The naming reflects infrastructure-specific indicators rather than malware families or ransomware affiliations",
+          "Shows investigators' attention to operational security details like usernames in exfiltration infrastructure"
+        ],
+        "source_section": "Section 2.4 Conclusion following the investigations, page 13"
+      },
+      "difficulty": "medium",
+      "source_report": "CERTFR-2021-CTI-009.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What are the key infrastructure characteristics of Lockean's Cobalt Strike C2 servers in the Akamai/Azure cluster?",
+      "expected_answer": {
+        "points": [
+          "Domain naming convention spoofing Akamai and Azure domains (e.g., amajai-technologies.network, asurecloud.tech)",
+          "Frequent use of the term 'technology' and derivatives in domain names",
+          "All domains purchased from Namecheap registrar using exotic, inexpensive TLDs",
+          "Two types of TLS certificates: default Cobalt Strike certificate (SHA-1: 6ece5ece4192683d2d84e25b0ba7e04f9cb7eb7c) and Let's Encrypt certificates",
+          "C2 servers primarily hosted by HostWinds and LeaseWeb in the United States",
+          "HTTP headers with specific values for 'Server' (apache, BizTalk, nginx, SAF, de Update, cloudflare, Nginx i386) and 'Keep-Alive' (various timeout and max values)"
+        ],
+        "source_section": "Section 2.1 Investigation into the Cobalt Strike C2 infrastructure involved, pages 6-9"
+      },
+      "difficulty": "medium",
+      "source_report": "CERTFR-2021-CTI-009.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "How did Lockean's ransomware affiliations evolve over time and what external factors influenced these changes?",
+      "expected_answer": {
+        "points": [
+          "June 2020 onwards: DoppelPaymer",
+          "Unknown start date to November 2020: Maze, transitioning to Egregor in September 2020 when Maze was discontinued",
+          "Unknown period: ProLock (possibly concurrent with Egregor usage)",
+          "March 2021 onwards: Sodinokibi (REvil), likely adopted after Egregor's dismantling in February 2021",
+          "External factors: Maze shutdown prompted switch to Egregor; Egregor dismantling in February 2021 led to adoption of Sodinokibi",
+          "Potential future shift to Grief as DoppelPaymer successor was noted by ANSSI",
+          "Demonstrates opportunistic affiliation strategy adapting to law enforcement actions and ransomware availability"
+        ],
+        "source_section": "Section 3.4 Encryption, pages 15-17; Figure 3.1, page 17"
+      },
+      "difficulty": "hard",
+      "source_report": "CERTFR-2021-CTI-009.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What commodity banking trojan was initially delivered via a malicious document in this incident?",
+      "expected_answer": {
+        "points": [
+          "Qakbot banking trojan",
+          "Delivered through a malicious Excel document with macros",
+          "The host was configured to trust and enable macros on all Excel documents, causing automatic execution without warning"
+        ],
+        "source_section": "Initial infection description, page 1, paragraph 1"
+      },
+      "difficulty": "easy",
+      "source_report": "CTIR_casestudy_2.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "How did the attack progress from initial access to potential ransomware deployment capability?",
+      "expected_answer": {
+        "points": [
+          "Initial access: Qakbot maldoc executed macros, downloaded payload via rundll32.exe",
+          "Establish foothold: PowerShell downloaded Cobalt Strike, established C2 over ports 80, 443, and 8080",
+          "Reconnaissance: Used Bloodhound and ADFind to enumerate Active Directory users and Domain Controllers",
+          "Lateral movement: Deployed Cobalt Strike executables to two Domain Controllers via ADMIN$ share, installed as service for remote execution",
+          "Pre-ransomware positioning: Adversary gained capability to deploy ransomware across the environment before detection and remediation"
+        ],
+        "source_section": "Attack progression narrative throughout page 1"
+      },
+      "difficulty": "medium",
+      "source_report": "CTIR_casestudy_2.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What Active Directory enumeration tools and techniques did the adversary use, and how was the output stored?",
+      "expected_answer": {
+        "points": [
+          "Bloodhound: Open-source Active Directory profiling tool used to identify users and systems within the domain",
+          "ADFind: Open-source Active Directory profiling tool used to enumerate other hosts",
+          "Bloodhound output: Stored as .JSON file in user's Downloads folder containing domain user information",
+          "ADFind output: Directed to .CSV file (later deleted by adversary)",
+          "PowerShell: Used to enumerate Domain Controllers on the domain"
+        ],
+        "source_section": "Reconnaissance and enumeration section, page 1, paragraphs 2-3"
+      },
+      "difficulty": "medium",
+      "source_report": "CTIR_casestudy_2.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What evidence indicated that the Cobalt Strike payloads were executed remotely rather than locally on the compromised systems?",
+      "expected_answer": {
+        "points": [
+          "Cobalt Strike beacons were executed from the ADMIN$ share (e.g., '\\ADMIN$\\9b0c536.exe')",
+          "ADMIN$ share execution path suggests remote execution from another system",
+          "One Cobalt Strike payload was installed on a host as a service and executed",
+          "Service installation provided additional evidence of adversary's remote execution capability",
+          "Payloads were dropped on two Domain Controllers, indicating lateral movement and remote deployment"
+        ],
+        "source_section": "Cobalt Strike beacon analysis, page 1, paragraph 4"
+      },
+      "difficulty": "hard",
+      "source_report": "CTIR_casestudy_2.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What are the specific checksum8 values and URI lengths required to retrieve Beacon payloads from Cobalt Strike Team Servers for different architectures?",
+      "expected_answer": {
+        "points": [
+          "x86 Normal mode: Checksum8 value of 92, any URI length (example: /aaaaaw)",
+          "x64 Normal mode: Checksum8 value of 93, URI length of 4 (example: /dVbA)",
+          "x86 Strict mode: Checksum8 value of 92, URI length of 5 (example: /aa910)",
+          "x64 Strict mode: Checksum8 value of 93, URI length of 5 (example: /ab820)"
+        ],
+        "source_section": "Data Validation section, Table 1 - Stager URI breakdown, page 22"
+      },
+      "difficulty": "easy",
+      "source_report": "sneak-peek-ch1-2-finding-beacons-in-the-dark.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "What is the rationale behind hunting for Cobalt Strike Team Servers rather than detecting Beacon payloads on endpoints, and how does this approach align with proactive defense strategies?",
+      "expected_answer": {
+        "points": [
+          "Detecting Beacon on endpoints is reactive - it means a threat actor is already active on networks or there has been a patient zero victim",
+          "Detecting Team Servers has no such requirement - does not need to wait for a device to be targeted before taking action",
+          "Proactive approach allows defenders to cut the head off the snake before it ever has a chance to bite",
+          "Enables preventative actions before any actual breach occurs",
+          "Aligns with the principle that prevention is always better than a cure"
+        ],
+        "source_section": "Chapter Two: All Your Beacons Are Belong to Us, Data Collection section, pages 15-16"
+      },
+      "difficulty": "medium",
+      "source_report": "sneak-peek-ch1-2-finding-beacons-in-the-dark.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What are the technical methodologies and indicators that can be used to identify Cobalt Strike Team Servers, and which Shodan queries were demonstrated in the report?",
+      "expected_answer": {
+        "points": [
+          "Default security certificates (SSL certificate serial: 146473198)",
+          "Default port 50050/TCP",
+          "Tell-tale extra null byte in HTTP server responses",
+          "JARM signatures (specifically Java 11 TLS stack: 07d14d16d21d21d07c42d41d00041d24a458a375eef0c576d23a7bab9a9fb1)",
+          "NanoHTTPD '404 Not Found' response with Content-Length: 0, Content-Type: text/plain, and Date header",
+          "Malleable C2 profile certificates (e.g., Microsoft Update profile with CN www.windowsupdate.com)",
+          "DNS redirector response analysis"
+        ],
+        "source_section": "Crafting Some Queries section, pages 16-21"
+      },
+      "difficulty": "medium",
+      "source_report": "sneak-peek-ch1-2-finding-beacons-in-the-dark.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE/CONTEXTUAL",
+      "question": "How does the BlackBerry CTI lifecycle address the needs of different stakeholders across the XDR solution space, and what specific intelligence questions does each stakeholder group require answered?",
+      "expected_answer": {
+        "points": [
+          "SOC teams: 'How can we improve incident correlation and reduce alert fatigue?' - require contextualized alert information",
+          "Product engineering: 'How can we fine-tune EDR to detect Beacon payloads?' - need better understanding of Cobalt Strike Beacon operation",
+          "Data scientists: 'What features are helpful for training models to classify Cobalt Strike Beacon payloads and configurations?' - want labeled data for training models",
+          "Incident Response: 'How can we improve correlation and campaign tracking relating to Cobalt Strike?' - need intelligence correlation, IOCs and TTPs",
+          "Intelligence analysts: 'How can we track Team Servers and campaigns?' - require tracking capabilities",
+          "The lifecycle serves all XDR stakeholders with different deliverables tailored to each audience"
+        ],
+        "source_section": "Aligning the Stars: The CTI Lifecycle section, pages 13-14"
+      },
+      "difficulty": "hard",
+      "source_report": "sneak-peek-ch1-2-finding-beacons-in-the-dark.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What file extension does Conti ransomware use for encrypted files in this attack?",
+      "expected_answer": {
+        "points": [
+          "Encrypted files are renamed with a .FEEDC extension",
+          "The malware excludes files already with *.FEEDC extension from encryption"
+        ],
+        "source_section": "Analysis section, page 5"
+      },
+      "difficulty": "easy",
+      "source_report": "HSE_Conti_140521_UPDATE.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "How does the attack progress from initial access to ransomware deployment based on the observed tactics?",
+      "expected_answer": {
+        "points": [
+          "Cobalt Strike beacons were deployed to move laterally within the environment",
+          "Internal network subnets were enumerated and results saved to files for reconnaissance",
+          "Multiple batch files (.bat) were used to copy malware to endpoints",
+          "PsExec.exe was then used to execute the malicious payload on endpoints using compromised user credentials",
+          "Finally, Conti ransomware v3 payload was executed to encrypt files"
+        ],
+        "source_section": "Analysis section, pages 4-5"
+      },
+      "difficulty": "medium",
+      "source_report": "HSE_Conti_140521_UPDATE.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What MITRE ATT&CK techniques are associated with the Impact and Defense Evasion phases of this attack?",
+      "expected_answer": {
+        "points": [
+          "IMPACT: T1486 - Data Encrypted for Impact",
+          "IMPACT: T1490 - Inhibit System Recovery",
+          "DEFENSE EVASION: T1027.002 - Software Packing",
+          "DEFENSE EVASION: T1036 - Masquerading",
+          "DEFENSE EVASION: T1564.003 - Hidden Window",
+          "DEFENSE EVASION: T1497.001 - Virtualization/Sandbox Evasion::System Checks"
+        ],
+        "source_section": "Mitre ATT&CK section, pages 5-6"
+      },
+      "difficulty": "medium",
+      "source_report": "HSE_Conti_140521_UPDATE.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What evidence indicates this was a coordinated campaign targeting the Irish health sector rather than separate incidents?",
+      "expected_answer": {
+        "points": [
+          "Both HSE and Department of Health (DoH) were targeted on the same day (14th May 2021)",
+          "Suspicious activity on DoH network was detected on Thursday 13th May, followed by HSE attack on 14th May",
+          "Both attacks involved Cobalt Strike beacons indicating similar tactics",
+          "The NCSC explicitly stated 'These attacks are believed to be part of the same campaign targeting the Irish health sector'",
+          "Similar malware and tools were used across both organizations"
+        ],
+        "source_section": "Alert - Threat Type and Background sections, pages 2-3"
+      },
+      "difficulty": "hard",
+      "source_report": "HSE_Conti_140521_UPDATE.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What percentage of ransomware attacks in Q4 2020 involved Cobalt Strike according to Cisco Talos?",
+      "expected_answer": {
+        "points": [
+          "66% of all ransomware attacks in Q4 2020 involved Cobalt Strike",
+          "This statistic was reported by Cisco Talos"
+        ],
+        "source_section": "Executive Summary, page 2"
+      },
+      "difficulty": "easy",
+      "source_report": "mtp-2021-0914.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "What is the primary reason why detection of Cobalt Strike remains difficult despite its age and prevalence?",
+      "expected_answer": {
+        "points": [
+          "The framework provides two key defense evasion features: Artifact Kit and Malleable C2 Profiles",
+          "Artifact Kit enables operators to customize payload creation to avoid known signatures",
+          "Malleable C2 Profiles enable operators to customize command and control protocol details",
+          "Detecting Cobalt Strike requires a full spectrum of detections including both host-based and network-based monitoring"
+        ],
+        "source_section": "Executive Summary, page 2"
+      },
+      "difficulty": "medium",
+      "source_report": "mtp-2021-0914.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What are the default named pipe patterns used by Cobalt Strike that can be detected via Sysmon events?",
+      "expected_answer": {
+        "points": [
+          "Default pipe name 'msagent-xx' is used for communication between SMB Beacons",
+          "Default pipe name 'MSSE-xxx-server' is used in Cobalt Strike's default EXE and DLL binaries for shellcode injection",
+          "These can be detected using Sysmon events 17 and 18 (pipe events)",
+          "A Sigma rule from Florian Roth and Wojciech Lesicki can detect these default naming patterns",
+          "The 'msagent' name is easily changed but 'MSSE' requires Artifact Kit to modify"
+        ],
+        "source_section": "Named Pipes section, pages 14-15"
+      },
+      "difficulty": "medium",
+      "source_report": "mtp-2021-0914.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "How did the Chimera threat actor use Cobalt Strike differently from typical deployments, and what sectors did they target?",
+      "expected_answer": {
+        "points": [
+          "Chimera is likely a Chinese state-sponsored threat actor",
+          "Targeted semiconductor firms and aviation entities",
+          "Used stolen credentials and password spraying for initial access",
+          "Hosted C2 servers on Google's or Microsoft's cloud services to make communications harder to detect",
+          "Used Windows Task Scheduler (schtasks.exe) for both persistence and single executions",
+          "Replaced legitimate Google Chrome updater executable and created scheduled tasks for system startup execution"
+        ],
+        "source_section": "Observed Threat Actor Use - Persistence, pages 8-9"
+      },
+      "difficulty": "hard",
+      "source_report": "mtp-2021-0914.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What cloud storage services does the adversary's exfiltration tool support?",
+      "expected_answer": {
+        "points": [
+          "Dropbox",
+          "Google Drive",
+          "OneDrive"
+        ],
+        "source_section": "Exfiltration (TA0010), page 9"
+      },
+      "difficulty": "easy",
+      "source_report": "research.nccgroup.com-Abusing_cloud_services_to_fly_under_the_radar.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "How did the adversary bypass two-factor authentication to gain VPN access in one specific case?",
+      "expected_answer": {
+        "points": [
+          "Accessed SharePoint Online document describing VPN access procedures",
+          "Configured an alternate phone number controlled by the adversary in the company portal",
+          "Received SMS OTP on their own phone number via two-factor authentication interception",
+          "Made a mistake by testing the 2FA system first, sending Chinese language text to the legitimate user's primary phone",
+          "Language in 2FA message was based on browser language settings (Simplified Chinese)"
+        ],
+        "source_section": "Initial Access (TA0001), page 3"
+      },
+      "difficulty": "medium",
+      "source_report": "research.nccgroup.com-Abusing_cloud_services_to_fly_under_the_radar.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What renamed filenames did the adversary use for WinRAR (rar.exe) across intrusions?",
+      "expected_answer": {
+        "points": [
+          "jucheck.exe",
+          "RecordedTV.ms",
+          "teredo.tmp",
+          "update.exe",
+          "msadcs1.exe"
+        ],
+        "source_section": "Collection (TA0009), page 7"
+      },
+      "difficulty": "easy",
+      "source_report": "research.nccgroup.com-Abusing_cloud_services_to_fly_under_the_radar.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What evidence supports the attribution of multiple intrusions to the same activity group?",
+      "expected_answer": {
+        "points": [
+          "Adversary working hours match GMT+8 timezone, activity ceased during Chinese Golden Week holiday",
+          "Infrastructure overlap: use of appspot.com and azureedge.net domains for C2 with consistent naming conventions",
+          "Capability overlap: password spraying/credential stuffing, Cobalt Strike, NTDS.dit dumping, scheduled tasks/batch files, WinRAR, cloud exfil tool to OneDrive",
+          "Strong overlap in filenames for tools, staged data, and folders across intrusions",
+          "Victim targeting: semiconductors and aviation industry",
+          "Overlap concentrated in top half of pyramid of pain (domain names, host artifacts, tools, TTPs)"
+        ],
+        "source_section": "The same activity group?, page 10-11"
+      },
+      "difficulty": "hard",
+      "source_report": "research.nccgroup.com-Abusing_cloud_services_to_fly_under_the_radar.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What was the initial infection vector used in this Cobalt Strike campaign?",
+      "expected_answer": {
+        "points": [
+          "A socially engineered spear phishing email sent to an internal user",
+          "The email contained a link to download a malicious archive file",
+          "The email was crafted to appear as a reply to an existing conversation thread",
+          "A forged sender email address was used to make it appear legitimate"
+        ],
+        "source_section": "Locating Patient Zero, pages 18-20"
+      },
+      "difficulty": "easy",
+      "source_report": "Tracking_Cobalt_Strike__A_Trend_Micro_Vision_One_Investigation.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "How did the attack progress from initial access to reconnaissance in the affected environment?",
+      "expected_answer": {
+        "points": [
+          "User executed excel.exe from malicious email attachment (analysis-57909253.xlsx) using DDE technique",
+          "Excel.exe spawned rundll32.exe which loaded iroto.tio file",
+          "Rundll32.exe executed mobsync.exe (legitimate MS tool hijacked via process hollowing)",
+          "Mobsync.exe performed extensive reconnaissance including whoami, ipconfig, arp, net view, and nslookup commands",
+          "Hacking tools Bloodhound and ADFind.exe were deployed to extract Active Directory information",
+          "Pass-the-Hash attacks were used for lateral movement to other endpoints via SMB"
+        ],
+        "source_section": "Endpoint-1 section, pages 4-11; Initial detections, IOCs, and observed TTPs"
+      },
+      "difficulty": "medium",
+      "source_report": "Tracking_Cobalt_Strike__A_Trend_Micro_Vision_One_Investigation.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What command and control (C2) infrastructure and IP addresses did the Cobalt Strike beacon attempt to connect to?",
+      "expected_answer": {
+        "points": [
+          "222.153.124.130",
+          "109.106.69.138",
+          "75.118.1.141",
+          "92.59.35.196",
+          "104.98.42.5",
+          "204.16.247.35 (madesecuritybusiness[.]com)",
+          "Suspicious domains: dharamdiwan[.]com and lenoirramosjr[.]com"
+        ],
+        "source_section": "Events related to mobsync.exe, pages 8-9; Figure 4, page 7"
+      },
+      "difficulty": "easy",
+      "source_report": "Tracking_Cobalt_Strike__A_Trend_Micro_Vision_One_Investigation.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What MITRE ATT&CK techniques were observed throughout the attack chain, and which phases of the attack lifecycle did they correspond to?",
+      "expected_answer": {
+        "points": [
+          "Initial Access: T1566 - Phishing (spear phishing email)",
+          "Execution: T1204 - User Execution (opening malicious Excel file with DDE)",
+          "Persistence: T1078 - Valid Accounts (compromised user accounts)",
+          "Privilege Escalation: T1078 - Valid Accounts",
+          "Defense Evasion: T1055 - Process Injection (process hollowing of mobsync.exe), T1562 - Impair Defenses",
+          "Discovery: T1135 - Network Share Discovery, T1018 - Remote System Discovery",
+          "Lateral Movement: T1021 - Remote Services (SMB file transfer)",
+          "Command and Control: T1071 - Application Layer Protocol"
+        ],
+        "source_section": "MITRE mapping table, page 23; Observed Attack Techniques throughout the report"
+      },
+      "difficulty": "hard",
+      "source_report": "Tracking_Cobalt_Strike__A_Trend_Micro_Vision_One_Investigation.pdf",
+      "source_year": 2021
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What named pipe does the KoboldLoader SMB beacon use for inter-process communication?",
+      "expected_answer": {
+        "points": [
+          "PipeName: \\\\.\\pipe\\servicepipe.zo9keez4weechei8johR.0521cc13",
+          "This is specified in the beacon configuration data",
+          "Port 4444 is used for SMB beacon communication"
+        ],
+        "source_section": "KoboldLoader beacon configuration data, Appendix section, page 15"
+      },
+      "difficulty": "easy",
+      "source_report": "Blowing_Cobalt_Strike_Out_of_the_Water_With_Memory_Analysis.pdf",
+      "source_year": 2022
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "Why is memory analysis necessary to detect the Cobalt Strike loaders examined in this report?",
+      "expected_answer": {
+        "points": [
+          "Cobalt Strike mainly operates in memory once the initial loader is executed",
+          "When the payload is statically armored, exists only in memory and refuses to execute, traditional detection fails",
+          "The samples use evasion techniques like in-memory evasion features, making them undetectable without memory inspection",
+          "Looking at deltas in memory at key points of execution extracts meaningful information and artifacts",
+          "Without memory analysis, there is no static or dynamic data useful for accurate detection"
+        ],
+        "source_section": "Overview of Cobalt Strike section, pages 2-3; Catching Cobalt Strike Through Analyzing Its Memory section, pages 10-11"
+      },
+      "difficulty": "medium",
+      "source_report": "Blowing_Cobalt_Strike_Out_of_the_Water_With_Memory_Analysis.pdf",
+      "source_year": 2022
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What evasion techniques does KoboldLoader use to bypass sandbox detection?",
+      "expected_answer": {
+        "points": [
+          "Uses only native API functions instead of high-level user mode functions",
+          "Dynamically resolves functions by hash instead of plain text strings",
+          "Creates custom syscall stubs to bypass hooked native functions",
+          "Uses mapping injection to run the payload by spawning sethc.exe child process",
+          "Employs direct syscalls for Nt* functions (NtCreateSection, NtMapViewOfSection, etc.)",
+          "Maintains two separate tables of function hash/address pairs"
+        ],
+        "source_section": "KoboldLoader SMB Beacon section, pages 3-4"
+      },
+      "difficulty": "hard",
+      "source_report": "Blowing_Cobalt_Strike_Out_of_the_Water_With_Memory_Analysis.pdf",
+      "source_year": 2022
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What are the key differences between the three Cobalt Strike loaders (KoboldLoader, MagnetLoader, LithiumLoader) analyzed in this report?",
+      "expected_answer": {
+        "points": [
+          "KoboldLoader: Loads SMB beacon (port 4444), uses custom syscalls and mapping injection via sethc.exe",
+          "MagnetLoader: Loads HTTPS beacon (port 443), mimics legitimate mscms.dll library with fake exports and resources, uses EnumChildWindows callback for execution",
+          "LithiumLoader: Loads stager beacon, uses DLL side-loading chain with Fortinet VPN installer, modified libcurl.dll with injected malicious routine in curl_easy_cleanup function",
+          "All three use different execution methods but share common goal of loading Cobalt Strike beacons in memory"
+        ],
+        "source_section": "KoboldLoader SMB Beacon (page 3), MagnetLoader (pages 5-6), LithiumLoader (pages 7-9)"
+      },
+      "difficulty": "hard",
+      "source_report": "Blowing_Cobalt_Strike_Out_of_the_Water_With_Memory_Analysis.pdf",
+      "source_year": 2022
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What is the name of the scheduled task created by GootLoader for persistence on infected machines?",
+      "expected_answer": {
+        "points": [
+          "The scheduled task is named 'Customer Engineering'",
+          "This task is configured to execute the second stage JavaScript file",
+          "The task creation is performed through WScript calls"
+        ],
+        "source_section": "Stage #1 - Initial GootLoader JavaScript Analysis, pages 9-12"
+      },
+      "difficulty": "easy",
+      "source_report": "THREAT_ALERT_GootLoader_-_Large_payload_leading_to_compromise__BLOG_.pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q002",
+      "type": "TECHNICAL",
+      "question": "What post-infection frameworks were deployed by the threat actor following the GootLoader infection?",
+      "expected_answer": {
+        "points": [
+          "Cobalt Strike - deployed using DLL hijacking technique with VLC MediaPlayer executable",
+          "SystemBC - a proxy malware leveraging SOCKS5 protocol",
+          "SystemBC is typically used for data exfiltration phase",
+          "Cobalt Strike C2 IP address: 193.106.191.202"
+        ],
+        "source_section": "KEY DETAILS page 1, Post-infection Activities page 6, Cobalt Strike section pages 18-22, SystemBC section pages 27-29"
+      },
+      "difficulty": "medium",
+      "source_report": "THREAT_ALERT_GootLoader_-_Large_payload_leading_to_compromise__BLOG_.pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q003",
+      "type": "ANALYTICAL",
+      "question": "How does GootLoader evade security mechanisms during the infection process?",
+      "expected_answer": {
+        "points": [
+          "Uses extremely large payload files (40MB and more) to evade security scanners",
+          "Masquerades malicious code with legitimate JavaScript libraries (e.g., chroma.js)",
+          "Implements multiple layers of obfuscation in JavaScript files",
+          "Uses multiple JavaScript loops to extend execution time as anti-sandbox mechanism",
+          "Inserts random strings to inflate file size and complicate analysis"
+        ],
+        "source_section": "KEY DETAILS page 1, Stage #1 analysis pages 9-11, What's Happening section page 2"
+      },
+      "difficulty": "medium",
+      "source_report": "THREAT_ALERT_GootLoader_-_Large_payload_leading_to_compromise__BLOG_.pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What geographic regions and industry sectors are primarily targeted by GootLoader according to this report?",
+      "expected_answer": {
+        "points": [
+          "Geographic targets: English-speaking countries including United States, United Kingdom, and Australia",
+          "Industry targets: Healthcare and finance organizations are more prominently targeted",
+          "The threat actor operates under the designation UNC2565 according to Mandiant"
+        ],
+        "source_section": "Cybereason Threat Alerts section, page 2"
+      },
+      "difficulty": "easy",
+      "source_report": "THREAT_ALERT_GootLoader_-_Large_payload_leading_to_compromise__BLOG_.pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "When was the Hydrochasma campaign first observed and what was the initial detection trigger?",
+      "expected_answer": {
+        "points": [
+          "Campaign ongoing since at least October 2022",
+          "Initial detection was triggered by the presence of SoftEtherVPN tool",
+          "SoftEtherVPN is free, open-source, and cross-platform VPN software"
+        ],
+        "source_section": "Introduction and Attack Chain section, pages 1-2"
+      },
+      "difficulty": "easy",
+      "source_report": "Symantec_Hydrochasma-UnknownGroup-Targets-Medical-Shipping-Asia(02-22-2023).pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "What is the likely motivation behind the Hydrochasma campaign and what evidence supports this assessment?",
+      "expected_answer": {
+        "points": [
+          "Most likely motivation is intelligence gathering",
+          "Targets include medical laboratories and shipping companies in Asia - industries potentially involved in COVID-19 treatments or vaccines",
+          "Tools deployed allow for persistent and stealthy access, privilege escalation, and lateral movement",
+          "Tools include remote access capabilities that could be used for data exfiltration",
+          "No actual data exfiltration was observed, but the targeting pattern and toolset indicate espionage intent"
+        ],
+        "source_section": "Introduction and Attack Chain sections, pages 1-2"
+      },
+      "difficulty": "medium",
+      "source_report": "Symantec_Hydrochasma-UnknownGroup-Targets-Medical-Shipping-Asia(02-22-2023).pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What publicly available tools and living-off-the-land techniques were used by Hydrochasma for credential access and lateral movement?",
+      "expected_answer": {
+        "points": [
+          "Process Dumper (lsass.exe) - for dumping domain passwords",
+          "BrowserGhost - for grabbing passwords from internet browsers",
+          "HackBrowserData - open-source tool to decrypt browser data",
+          "Cobalt Strike Beacon - for command execution, process injection, and privilege escalation",
+          "Meterpreter (disguised as msedgeupdate.dll) - part of Metasploit framework for remote access",
+          "Ntlmrelay - for NTLM relay attacks to intercept authentication requests",
+          "Procdump - Microsoft Sysinternals tool used as process dump utility",
+          "Gogo, AlliN, and Fscan scanning tools - for network reconnaissance and lateral penetration"
+        ],
+        "source_section": "Attack Chain and TTPs sections, pages 1-2"
+      },
+      "difficulty": "medium",
+      "source_report": "Symantec_Hydrochasma-UnknownGroup-Targets-Medical-Shipping-Asia(02-22-2023).pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What makes the Hydrochasma threat actor distinctive from previously identified groups, and what challenges does this pose for attribution?",
+      "expected_answer": {
+        "points": [
+          "Not linked to any previously identified threat group - designated as new actor identity",
+          "Exclusively relies on publicly available and living-off-the-land tools rather than custom malware",
+          "This approach makes the attack stealthier and attribution more difficult",
+          "Lack of custom malware means fewer unique signatures or tradecraft patterns for attribution",
+          "Use of legitimate tools makes detection and tracking more challenging",
+          "Symantec found no evidence to link activity to known actors"
+        ],
+        "source_section": "Introduction and Attack Chain sections, pages 1-3"
+      },
+      "difficulty": "hard",
+      "source_report": "Symantec_Hydrochasma-UnknownGroup-Targets-Medical-Shipping-Asia(02-22-2023).pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "What domain is used as the BRUTERATEL C2 server in the SNOWYAMBER campaign?",
+      "expected_answer": {
+        "points": [
+          "Domain: badriatimimi[.]com",
+          "This domain is specifically identified as the BRUTERATEL C2 infrastructure"
+        ],
+        "source_section": "SNOWYAMBER IoC reference sheet, page 5"
+      },
+      "difficulty": "easy",
+      "source_report": "IoC_Reference_.pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "What compilation mistake did the adversary make with the BugSplatRc64.dll sample dated 8/02/2023, and what information does this reveal?",
+      "expected_answer": {
+        "points": [
+          "The adversary mistakenly added internal functions to exports during compilation",
+          "Exported functions include those authored by the adversary and from libraries: SysWhispers3, Nlohmann JSON, and Obfuscate",
+          "While the binary is stripped, the exported function names can be demangled",
+          "This reveals naming conventions, prototypes, and datatypes used by the adversary",
+          "This error provides valuable intelligence about the adversary's development practices and toolchain"
+        ],
+        "source_section": "SNOWYAMBER IoC reference sheet, page 4, Additional remarks section"
+      },
+      "difficulty": "medium",
+      "source_report": "IoC_Reference_.pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "List the malicious DLL modules used in the HALFRIG attack chain in order, including their file names and roles.",
+      "expected_answer": {
+        "points": [
+          "1st module: AppvIsvSubsystems64.dll (27KB, SHA256: ddf218e4e7ccd5e8bd502fb115d1e7fbfaa393fb7e0b3b9001168caebc771c50)",
+          "2nd module: msword.dll (53KB, SHA256: efeb7d9d0fabe464a32c4e33fe756d6ef7a9b369c0f1462b3dd573b6b667488e)",
+          "3rd module: envsrv.dll (56KB, SHA256: cfa65036aff012d7478694ea733e3e882cf8e18f336af5fba3ed2ef29160d45b)",
+          "4th module: mschost.dll (391KB, SHA256: 86edfd6c7a2fab8c50a372494e3d5b08c032cca754396f6e288d5d4c5738cb4c) - shellcode stager",
+          "All modules are loaded via DLL sideloading using the legitimate Note.exe binary"
+        ],
+        "source_section": "HALFRIG IoC reference sheet, pages 6-7"
+      },
+      "difficulty": "medium",
+      "source_report": "IoC_Reference_.pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What common infrastructure delivery mechanism is shared across SNOWYAMBER, HALFRIG, and QUARTERRIG campaigns?",
+      "expected_answer": {
+        "points": [
+          "All three campaigns use ENVYSCOUT as the delivery mechanism",
+          "ENVYSCOUT delivers malicious payloads via compromised or adversary-controlled websites",
+          "SNOWYAMBER uses ENVYSCOUT to deliver ZIP and ISO files containing malware",
+          "HALFRIG uses ENVYSCOUT with a fingerprint collector (sawabfoundation[.]net/p.php) that captures IP and User-Agent",
+          "QUARTERRIG uses ENVYSCOUT hosted on compromised domains like sylvio.com[.]br",
+          "This indicates a consistent TTPs pattern across all three related campaigns"
+        ],
+        "source_section": "SNOWYAMBER page 5, HALFRIG page 7, QUARTERRIG page 10, and Information section page 3"
+      },
+      "difficulty": "hard",
+      "source_report": "IoC_Reference_.pdf",
+      "source_year": 2023
+    },
+    {
+      "id": "Q001",
+      "type": "FACTUAL",
+      "question": "When were the Black Basta internal chat logs leaked and what time period do they cover?",
+      "expected_answer": {
+        "points": [
+          "The chat logs were leaked in February 2025",
+          "The dataset covers messages from September 18, 2023, to September 28, 2024",
+          "The JSON file contains more than 190,000 messages",
+          "Initially uploaded to MEGA and re-uploaded to Telegram on February 11 by ExploitWhispers"
+        ],
+        "source_section": "Introduction, page 3"
+      },
+      "difficulty": "easy",
+      "source_report": "A_Deep_Dive_into_the_Leaked_Black_Basta_Chat_Logs.pdf",
+      "source_year": 2025
+    },
+    {
+      "id": "Q002",
+      "type": "ANALYTICAL",
+      "question": "What does the leaked chat logs reveal about Black Basta's organizational structure and work culture?",
+      "expected_answer": {
+        "points": [
+          "Black Basta operates as a highly disciplined business unit with agile and compartmentalized structure",
+          "Members demonstrate initiative, creativity, and autonomy in specialized roles",
+          "The group follows a Monday-to-Friday work schedule resembling standard corporate hours",
+          "Peak messaging activity occurs between 08:00-18:00, with weekends typically reserved for rest",
+          "The organization resembles a small 'start-up style' enterprise with members actively collaborating on problem-solving"
+        ],
+        "source_section": "Executive Summary page 2, The hidden structure section pages 7-11"
+      },
+      "difficulty": "medium",
+      "source_report": "A_Deep_Dive_into_the_Leaked_Black_Basta_Chat_Logs.pdf",
+      "source_year": 2025
+    },
+    {
+      "id": "Q003",
+      "type": "TECHNICAL",
+      "question": "What is 'Coba PROXY' and how does Black Basta use it in their operations?",
+      "expected_answer": {
+        "points": [
+          "Coba PROXY is a custom-built proxy infrastructure designed to obfuscate Cobalt Strike's network traffic",
+          "It uses multi-tiered SOCKS5 proxies, SSH tunnels, and domain-fronting techniques",
+          "Traffic is routed through multiple relay points to hide the true Cobalt Strike Team Server location",
+          "Uses TLS encryption with Let's Encrypt certificates to blend beacon traffic with normal HTTPS traffic",
+          "Provides resilience by allowing automatic rerouting if one proxy node is taken down"
+        ],
+        "source_section": "Coba PROXY section, pages 26-28"
+      },
+      "difficulty": "hard",
+      "source_report": "A_Deep_Dive_into_the_Leaked_Black_Basta_Chat_Logs.pdf",
+      "source_year": 2025
+    },
+    {
+      "id": "Q004",
+      "type": "COMPARATIVE",
+      "question": "What social engineering tactics does Black Basta employ for initial access, and how do they differ from traditional phishing methods?",
+      "expected_answer": {
+        "points": [
+          "Black Basta uses previously undisclosed Microsoft Teams-based campaigns alongside traditional phishing",
+          "They leverage TeamsEnum to validate corporate emails and TeamsPhisher to send messages bypassing security controls",
+          "The group conducts fraud calls with RMM software (AnyDesk, TeamViewer) using designated callers with gender-targeted tactics",
+          "They employ XLL-based payloads as a less common attack vector for bypassing security controls",
+          "QR codes embedded in emails are used to obfuscate phishing links using legitimate services like Bing, Salesforce, and Cloudflare"
+        ],
+        "source_section": "Phishing with Microsoft Teams pages 14-16, Fraud calls with RMM page 19, Weaponized XLLs pages 17-18"
+      },
+      "difficulty": "medium",
+      "source_report": "A_Deep_Dive_into_the_Leaked_Black_Basta_Chat_Logs.pdf",
+      "source_year": 2025
+    }
+  ]
+}

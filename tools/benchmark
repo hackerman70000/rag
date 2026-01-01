@@ -1,0 +1,405 @@
+#!/usr/bin/env -S uv run --script
+import asyncio
+import json
+import os
+import sys
+import time
+from dataclasses import dataclass
+from datetime import datetime
+from pathlib import Path
+
+import httpx
+import typer
+from dotenv import load_dotenv
+from loguru import logger
+from rich.console import Console
+from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn
+from rich.table import Table
+from typing_extensions import Annotated
+
+from rag.config import Config
+from rag.store import ChromaManager
+
+load_dotenv()
+
+app = typer.Typer()
+console = Console()
+
+SYSTEM_PROMPT = """You are an expert threat intelligence analyst specializing in APT groups, malware, and cyber attacks.
+Answer based on your knowledge of:
+- APT group names, aliases, attribution
+- MITRE ATT&CK techniques
+- Malware families and IoCs
+- Historical cyber campaigns
+
+Provide detailed, accurate answers. If uncertain, indicate your confidence level."""
+
+RAG_SYSTEM_PROMPT = """You are an expert threat intelligence analyst specializing in APT groups, malware, and cyber attacks.
+
+Use the following context from threat intelligence reports to answer the question.
+Focus on facts explicitly stated in the reports.
+
+Context:
+{context}
+
+Provide a detailed answer based on the context above."""
+
+
+@dataclass
+class AsyncOpenRouterClient:
+    api_key: str
+    model: str = "google/gemma-3n-e4b-it"
+    base_url: str = "https://openrouter.ai/api/v1/chat/completions"
+    max_retries: int = 3
+
+    async def query(self, messages: list[dict], http_client: httpx.AsyncClient) -> str:
+        for attempt in range(self.max_retries):
+            try:
+                response = await http_client.post(
+                    self.base_url,
+                    headers={
+                        "Authorization": f"Bearer {self.api_key}",
+                        "Content-Type": "application/json",
+                    },
+                    json={"model": self.model, "messages": messages},
+                    timeout=120,
+                )
+
+                if response.status_code == 429:
+                    wait_time = 2 ** attempt
+                    logger.warning(f"Rate limited, waiting {wait_time}s...")
+                    await asyncio.sleep(wait_time)
+                    continue
+
+                response.raise_for_status()
+                return response.json()["choices"][0]["message"]["content"]
+
+            except httpx.RequestError as e:
+                if attempt == self.max_retries - 1:
+                    raise
+                logger.warning(f"Request failed (attempt {attempt + 1}): {e}")
+                await asyncio.sleep(2 ** attempt)
+
+        raise RuntimeError("Max retries exceeded")
+
+
+def load_questions(path: Path, limit: int | None = None) -> list[dict]:
+    with open(path) as f:
+        data = json.load(f)
+
+    questions = data.get("questions", [])
+    if limit:
+        questions = questions[:limit]
+
+    return questions
+
+
+def format_docs(docs: list) -> str:
+    formatted = []
+    for i, doc in enumerate(docs, 1):
+        source = doc.metadata.get("filename", "Unknown")
+        year = doc.metadata.get("year", "N/A")
+        content = doc.page_content[:1000]
+        formatted.append(f"[Report {i}] Source: {source} (Year: {year})\n{content}")
+
+    return "\n\n---\n\n".join(formatted)
+
+
+async def query_rag(
+    question: str,
+    retriever,
+    client: AsyncOpenRouterClient,
+    http_client: httpx.AsyncClient,
+) -> tuple[str, list, float]:
+    start = time.time()
+
+    docs = await asyncio.to_thread(retriever.invoke, question)
+    context = format_docs(docs)
+
+    messages = [
+        {"role": "system", "content": RAG_SYSTEM_PROMPT.format(context=context)},
+        {"role": "user", "content": question},
+    ]
+
+    answer = await client.query(messages, http_client)
+    latency = time.time() - start
+
+    return answer, docs, latency
+
+
+async def query_llm_only(
+    question: str,
+    client: AsyncOpenRouterClient,
+    http_client: httpx.AsyncClient,
+) -> tuple[str, float]:
+    start = time.time()
+
+    messages = [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": question},
+    ]
+
+    answer = await client.query(messages, http_client)
+    latency = time.time() - start
+
+    return answer, latency
+
+
+def save_results(results: dict, path: Path):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w") as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+
+
+def display_summary(results: dict):
+    summary = results.get("summary", {})
+    metadata = results.get("metadata", {})
+
+    table = Table(title="Benchmark Summary", show_lines=True)
+    table.add_column("Metric", style="cyan")
+    table.add_column("Value", style="green")
+
+    table.add_row("Mode", metadata.get("mode", "N/A"))
+    table.add_row("Model", metadata.get("model", "N/A"))
+    table.add_row("Backend", metadata.get("backend", "N/A"))
+    table.add_row("Concurrency", str(metadata.get("concurrency", 1)))
+    table.add_row("Total Questions", str(summary.get("total_processed", 0)))
+    table.add_row("RAG Errors", str(summary.get("rag_errors", 0)))
+    table.add_row("LLM-only Errors", str(summary.get("llm_only_errors", 0)))
+    table.add_row("Avg RAG Latency", f"{summary.get('avg_rag_latency_ms', 0):.0f} ms")
+    table.add_row("Avg LLM-only Latency", f"{summary.get('avg_llm_only_latency_ms', 0):.0f} ms")
+    table.add_row("Total Time", f"{summary.get('total_time_seconds', 0):.1f} s")
+
+    console.print()
+    console.print(table)
+
+
+async def process_question(
+    q: dict,
+    mode: str,
+    retriever,
+    client: AsyncOpenRouterClient,
+    http_client: httpx.AsyncClient,
+) -> tuple[dict, list[float], list[float], int, int]:
+    result = {
+        "question_id": q.get("id"),
+        "question": q.get("question"),
+        "question_type": q.get("type"),
+        "difficulty": q.get("difficulty"),
+        "source_report": q.get("source_report"),
+        "expected_answer": q.get("expected_answer"),
+        "rag": None,
+        "llm_only": None,
+    }
+
+    rag_latencies = []
+    llm_latencies = []
+    rag_errors = 0
+    llm_errors = 0
+
+    tasks = []
+
+    if mode in ("both", "rag"):
+        tasks.append(("rag", query_rag(q["question"], retriever, client, http_client)))
+
+    if mode in ("both", "llm-only"):
+        tasks.append(("llm_only", query_llm_only(q["question"], client, http_client)))
+
+    results_async = await asyncio.gather(
+        *[t[1] for t in tasks],
+        return_exceptions=True
+    )
+
+    for (task_name, _), task_result in zip(tasks, results_async):
+        if task_name == "rag":
+            if isinstance(task_result, Exception):
+                result["rag"] = {"answer": None, "latency_ms": 0, "sources": [], "error": str(task_result)}
+                rag_errors = 1
+                logger.warning(f"RAG error on {q['id']}: {task_result}")
+            else:
+                answer, docs, latency = task_result
+                result["rag"] = {
+                    "answer": answer,
+                    "latency_ms": int(latency * 1000),
+                    "sources": [
+                        {
+                            "filename": d.metadata.get("filename"),
+                            "year": d.metadata.get("year"),
+                            "preview": d.page_content[:200],
+                        }
+                        for d in docs
+                    ],
+                    "error": None,
+                }
+                rag_latencies.append(latency * 1000)
+
+        elif task_name == "llm_only":
+            if isinstance(task_result, Exception):
+                result["llm_only"] = {"answer": None, "latency_ms": 0, "error": str(task_result)}
+                llm_errors = 1
+                logger.warning(f"LLM-only error on {q['id']}: {task_result}")
+            else:
+                answer, latency = task_result
+                result["llm_only"] = {
+                    "answer": answer,
+                    "latency_ms": int(latency * 1000),
+                    "error": None,
+                }
+                llm_latencies.append(latency * 1000)
+
+    return result, rag_latencies, llm_latencies, rag_errors, llm_errors
+
+
+async def run_benchmark(
+    question_list: list[dict],
+    mode: str,
+    retriever,
+    client: AsyncOpenRouterClient,
+    concurrency: int,
+) -> tuple[list[dict], list[float], list[float], int, int, float]:
+    results_list = []
+    all_rag_latencies = []
+    all_llm_latencies = []
+    total_rag_errors = 0
+    total_llm_errors = 0
+
+    semaphore = asyncio.Semaphore(concurrency)
+    start_time = time.time()
+
+    async def bounded_process(q: dict, http_client: httpx.AsyncClient):
+        async with semaphore:
+            return await process_question(q, mode, retriever, client, http_client)
+
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TextColumn("{task.completed}/{task.total}"),
+        TimeElapsedColumn(),
+    ) as progress:
+        task = progress.add_task(f"Processing (concurrency={concurrency})...", total=len(question_list))
+
+        async with httpx.AsyncClient() as http_client:
+            pending_tasks = [bounded_process(q, http_client) for q in question_list]
+
+            for coro in asyncio.as_completed(pending_tasks):
+                result, rag_lat, llm_lat, rag_err, llm_err = await coro
+                results_list.append(result)
+                all_rag_latencies.extend(rag_lat)
+                all_llm_latencies.extend(llm_lat)
+                total_rag_errors += rag_err
+                total_llm_errors += llm_err
+                progress.update(task, advance=1)
+
+    total_time = time.time() - start_time
+    return results_list, all_rag_latencies, all_llm_latencies, total_rag_errors, total_llm_errors, total_time
+
+
+@app.command()
+def main(
+    mode: Annotated[str, typer.Option(help="Mode: both, rag, llm-only")] = "both",
+    backend: Annotated[str, typer.Option(help="Backend: openrouter, ollama")] = "openrouter",
+    model: Annotated[str, typer.Option(help="LLM model name")] = None,
+    questions: Annotated[Path, typer.Option(help="Questions JSON path")] = None,
+    output: Annotated[Path, typer.Option(help="Output results JSON path")] = None,
+    collection: Annotated[str, typer.Option(help="ChromaDB collection name")] = None,
+    embedding_model: Annotated[str, typer.Option(help="Embedding model")] = None,
+    limit: Annotated[int, typer.Option(help="Limit number of questions")] = None,
+    concurrency: Annotated[int, typer.Option(help="Number of concurrent requests")] = 5,
+):
+    logger.remove()
+    logger.add(sys.stderr, format="<green>{time:HH:mm:ss}</green> | <level>{level: <8}</level> | <level>{message}</level>", level="INFO")
+
+    if mode not in ("both", "rag", "llm-only"):
+        logger.error(f"Invalid mode: {mode}. Use: both, rag, llm-only")
+        raise typer.Exit(code=1)
+
+    if backend not in ("openrouter", "ollama"):
+        logger.error(f"Invalid backend: {backend}. Use: openrouter, ollama")
+        raise typer.Exit(code=1)
+
+    if backend == "openrouter":
+        api_key = os.getenv("OPENROUTER_API_KEY")
+        if not api_key:
+            logger.error("OPENROUTER_API_KEY not found in environment")
+            logger.error("Add it to .env file: OPENROUTER_API_KEY=sk-or-v1-xxxxx")
+            raise typer.Exit(code=1)
+
+        if model is None:
+            model = "google/gemma-3n-e4b-it"
+
+        client = AsyncOpenRouterClient(api_key=api_key, model=model)
+        logger.info(f"Using OpenRouter with model: {model}")
+    else:
+        logger.error("Ollama backend not implemented yet. Use --backend openrouter")
+        raise typer.Exit(code=1)
+
+    if questions is None:
+        questions = Config.DATA_DIR / "evaluation" / "all_questions.json"
+
+    if output is None:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output = Config.DATA_DIR / "evaluation" / f"benchmark_{mode}_{timestamp}.json"
+
+    if not questions.exists():
+        logger.error(f"Questions file not found: {questions}")
+        raise typer.Exit(code=1)
+
+    question_list = load_questions(questions, limit)
+    logger.info(f"Loaded {len(question_list)} questions")
+    logger.info(f"Concurrency: {concurrency}")
+
+    retriever = None
+    if mode in ("both", "rag"):
+        if embedding_model is None:
+            embedding_model = Config.EMBEDDING_MODEL
+
+        if collection is None:
+            collection = f"apt_reports_{embedding_model.replace('/', '_').replace('-', '_')}"
+
+        logger.info(f"Loading ChromaDB collection: {collection}")
+        chroma_manager = ChromaManager(
+            collection_name=collection,
+            embedding_model=embedding_model,
+        )
+        vectorstore = chroma_manager.load_vectorstore()
+        retriever = vectorstore.as_retriever(search_kwargs={"k": Config.RETRIEVAL_K})
+
+        stats = chroma_manager.get_collection_stats()
+        logger.info(f"Loaded {stats['document_count']} documents from ChromaDB")
+
+    results_list, rag_latencies, llm_latencies, rag_errors, llm_errors, total_time = asyncio.run(
+        run_benchmark(question_list, mode, retriever, client, concurrency)
+    )
+
+    results_list.sort(key=lambda x: x["question_id"])
+
+    output_data = {
+        "metadata": {
+            "run_id": f"benchmark_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
+            "mode": mode,
+            "backend": backend,
+            "model": model,
+            "concurrency": concurrency,
+            "total_questions": len(question_list),
+            "timestamp": datetime.now().isoformat(),
+        },
+        "results": results_list,
+        "summary": {
+            "total_processed": len(results_list),
+            "rag_errors": rag_errors,
+            "llm_only_errors": llm_errors,
+            "avg_rag_latency_ms": sum(rag_latencies) / len(rag_latencies) if rag_latencies else 0,
+            "avg_llm_only_latency_ms": sum(llm_latencies) / len(llm_latencies) if llm_latencies else 0,
+            "total_time_seconds": total_time,
+        },
+    }
+
+    save_results(output_data, output)
+    logger.success(f"Results saved to: {output}")
+
+    display_summary(output_data)
+
+
+if __name__ == "__main__":
+    app()
