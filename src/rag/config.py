@@ -1,8 +1,10 @@
-from pathlib import Path
-from dotenv import load_dotenv
 import os
+from pathlib import Path
+
+from dotenv import load_dotenv
 
 load_dotenv()
+
 
 class Config:
     PROJECT_ROOT = Path(__file__).parent.parent.parent
@@ -13,7 +15,9 @@ class Config:
     REPORTS_DIR = DATA_DIR / "reports"
 
     COLLECTION_NAME = "apt_reports"
-    EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "Qwen/Qwen3-Embedding-8B")
+    EMBEDDING_MODEL = os.getenv(
+        "EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2"
+    )
     PDF_LOADER = os.getenv("PDF_LOADER", "pymupdf4llm")
 
     CHUNK_SIZE = 1000
