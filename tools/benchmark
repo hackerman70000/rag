@@ -13,7 +13,13 @@ import typer
 from dotenv import load_dotenv
 from loguru import logger
 from rich.console import Console
-from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn
+from rich.progress import (
+    BarColumn,
+    Progress,
+    SpinnerColumn,
+    TextColumn,
+    TimeElapsedColumn,
+)
 from rich.table import Table
 from typing_extensions import Annotated
 
@@ -66,7 +72,7 @@ class AsyncOpenRouterClient:
                 )
 
                 if response.status_code == 429:
-                    wait_time = 2 ** attempt
+                    wait_time = 2**attempt
                     logger.warning(f"Rate limited, waiting {wait_time}s...")
                     await asyncio.sleep(wait_time)
                     continue
@@ -78,7 +84,7 @@ class AsyncOpenRouterClient:
                 if attempt == self.max_retries - 1:
                     raise
                 logger.warning(f"Request failed (attempt {attempt + 1}): {e}")
-                await asyncio.sleep(2 ** attempt)
+                await asyncio.sleep(2**attempt)
 
         raise RuntimeError("Max retries exceeded")
 
@@ -167,7 +173,9 @@ def display_summary(results: dict):
     table.add_row("RAG Errors", str(summary.get("rag_errors", 0)))
     table.add_row("LLM-only Errors", str(summary.get("llm_only_errors", 0)))
     table.add_row("Avg RAG Latency", f"{summary.get('avg_rag_latency_ms', 0):.0f} ms")
-    table.add_row("Avg LLM-only Latency", f"{summary.get('avg_llm_only_latency_ms', 0):.0f} ms")
+    table.add_row(
+        "Avg LLM-only Latency", f"{summary.get('avg_llm_only_latency_ms', 0):.0f} ms"
+    )
     table.add_row("Total Time", f"{summary.get('total_time_seconds', 0):.1f} s")
 
     console.print()
@@ -205,15 +213,17 @@ async def process_question(
     if mode in ("both", "llm-only"):
         tasks.append(("llm_only", query_llm_only(q["question"], client, http_client)))
 
-    results_async = await asyncio.gather(
-        *[t[1] for t in tasks],
-        return_exceptions=True
-    )
+    results_async = await asyncio.gather(*[t[1] for t in tasks], return_exceptions=True)
 
     for (task_name, _), task_result in zip(tasks, results_async):
         if task_name == "rag":
             if isinstance(task_result, Exception):
-                result["rag"] = {"answer": None, "latency_ms": 0, "sources": [], "error": str(task_result)}
+                result["rag"] = {
+                    "answer": None,
+                    "latency_ms": 0,
+                    "sources": [],
+                    "error": str(task_result),
+                }
                 rag_errors = 1
                 logger.warning(f"RAG error on {q['id']}: {task_result}")
             else:
@@ -235,7 +245,11 @@ async def process_question(
 
         elif task_name == "llm_only":
             if isinstance(task_result, Exception):
-                result["llm_only"] = {"answer": None, "latency_ms": 0, "error": str(task_result)}
+                result["llm_only"] = {
+                    "answer": None,
+                    "latency_ms": 0,
+                    "error": str(task_result),
+                }
                 llm_errors = 1
                 logger.warning(f"LLM-only error on {q['id']}: {task_result}")
             else:
@@ -277,7 +291,9 @@ async def run_benchmark(
         TextColumn("{task.completed}/{task.total}"),
         TimeElapsedColumn(),
     ) as progress:
-        task = progress.add_task(f"Processing (concurrency={concurrency})...", total=len(question_list))
+        task = progress.add_task(
+            f"Processing (concurrency={concurrency})...", total=len(question_list)
+        )
 
         async with httpx.AsyncClient() as http_client:
             pending_tasks = [bounded_process(q, http_client) for q in question_list]
@@ -292,13 +308,22 @@ async def run_benchmark(
                 progress.update(task, advance=1)
 
     total_time = time.time() - start_time
-    return results_list, all_rag_latencies, all_llm_latencies, total_rag_errors, total_llm_errors, total_time
+    return (
+        results_list,
+        all_rag_latencies,
+        all_llm_latencies,
+        total_rag_errors,
+        total_llm_errors,
+        total_time,
+    )
 
 
 @app.command()
 def main(
     mode: Annotated[str, typer.Option(help="Mode: both, rag, llm-only")] = "both",
-    backend: Annotated[str, typer.Option(help="Backend: openrouter, ollama")] = "openrouter",
+    backend: Annotated[
+        str, typer.Option(help="Backend: openrouter, ollama")
+    ] = "openrouter",
     model: Annotated[str, typer.Option(help="LLM model name")] = None,
     questions: Annotated[Path, typer.Option(help="Questions JSON path")] = None,
     output: Annotated[Path, typer.Option(help="Output results JSON path")] = None,
@@ -308,7 +333,11 @@ def main(
     concurrency: Annotated[int, typer.Option(help="Number of concurrent requests")] = 5,
 ):
     logger.remove()
-    logger.add(sys.stderr, format="<green>{time:HH:mm:ss}</green> | <level>{level: <8}</level> | <level>{message}</level>", level="INFO")
+    logger.add(
+        sys.stderr,
+        format="<green>{time:HH:mm:ss}</green> | <level>{level: <8}</level> | <level>{message}</level>",
+        level="INFO",
+    )
 
     if mode not in ("both", "rag", "llm-only"):
         logger.error(f"Invalid mode: {mode}. Use: both, rag, llm-only")
@@ -335,7 +364,7 @@ def main(
         raise typer.Exit(code=1)
 
     if questions is None:
-        questions = Config.DATA_DIR / "evaluation" / "all_questions.json"
+        questions = Config.DATA_DIR / "evaluation" / "questions.json"
 
     if output is None:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -355,7 +384,9 @@ def main(
             embedding_model = Config.EMBEDDING_MODEL
 
         if collection is None:
-            collection = f"apt_reports_{embedding_model.replace('/', '_').replace('-', '_')}"
+            collection = (
+                f"apt_reports_{embedding_model.replace('/', '_').replace('-', '_')}"
+            )
 
         logger.info(f"Loading ChromaDB collection: {collection}")
         chroma_manager = ChromaManager(
@@ -368,8 +399,8 @@ def main(
         stats = chroma_manager.get_collection_stats()
         logger.info(f"Loaded {stats['document_count']} documents from ChromaDB")
 
-    results_list, rag_latencies, llm_latencies, rag_errors, llm_errors, total_time = asyncio.run(
-        run_benchmark(question_list, mode, retriever, client, concurrency)
+    results_list, rag_latencies, llm_latencies, rag_errors, llm_errors, total_time = (
+        asyncio.run(run_benchmark(question_list, mode, retriever, client, concurrency))
     )
 
     results_list.sort(key=lambda x: x["question_id"])
@@ -389,8 +420,12 @@ def main(
             "total_processed": len(results_list),
             "rag_errors": rag_errors,
             "llm_only_errors": llm_errors,
-            "avg_rag_latency_ms": sum(rag_latencies) / len(rag_latencies) if rag_latencies else 0,
-            "avg_llm_only_latency_ms": sum(llm_latencies) / len(llm_latencies) if llm_latencies else 0,
+            "avg_rag_latency_ms": sum(rag_latencies) / len(rag_latencies)
+            if rag_latencies
+            else 0,
+            "avg_llm_only_latency_ms": sum(llm_latencies) / len(llm_latencies)
+            if llm_latencies
+            else 0,
             "total_time_seconds": total_time,
         },
     }
